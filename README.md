@@ -104,3 +104,17 @@ vi ~/c01-pagina-web/index.html
 ```
 
 
+wget https://github.com/SMX-2022-2024/02-installacio-docker/raw/main/web-example.zip
+
+```
+root@docker-sxm:/home/profe/pagina-web# tree
+.
+└── pagina-web
+    └── web-example
+        ├── assets
+        ├── images
+        ├── index.html
+        ├── single.html
+        └── web-example.zip
+```
+
