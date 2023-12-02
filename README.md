@@ -9,7 +9,7 @@ mkdir ~/c01-pagina-web
 cd ~/c01-pagina-web
 ```
 
-<br><hr><br>
+<br><hr>
 
 **Pas 2**: Descarrega dels fitxers del web site.
 
@@ -41,7 +41,7 @@ total 1512
 -rw-r--r-- 1 root root 1547642 Dec  2 18:46 web-exemple.zip
 ```
 
-<br><hr><br>
+<br><hr>
 
 **Pas 3**: Descomprimir el fitxer zip descarregat.
 
@@ -64,7 +64,7 @@ Archive:  web-exemple.zip
   inflating: index.html
 ```
 
-<br><hr><br>
+<br><hr>
 
 **Pas 4**: Comprovació de l'estructura de fitxers
 
