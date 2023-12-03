@@ -43,10 +43,12 @@ sudo docker image ls
 * **Sortida**:
 
 ```
+profe@docker-sxm:~/c01-contenidor-nginx$ sudo docker image ls
 REPOSITORY    TAG       IMAGE ID       CREATED        SIZE
 ....
 nginx         latest    a6bd71f48f68   12 days ago    187MB
 ....
+profe@docker-sxm:~/c01-contenidor-nginx$ 
 ```
 
 ## [Més informació a **```docker image```**](./files/opcions-de-les-comandes-docker.md#comanda-1-docker-image-comandes)
@@ -188,7 +190,7 @@ ip a | grep 192.168.56
 ```
 profe@docker-sxm:~/c01-contenidor-nginx$ ip a | grep 192.168.56
     inet 192.168.56.122/24 metric 100 brd 192.168.56.255 scope global dynamic enp0s8
-profe@docker-sxm:~/c01-contenidor-nginx$ 
+profe@docker-sxm:~/c01-contenidor-nginx$ _
 ```
 
 L'adreça IP que ens interessa és aquella que comença amb **```192.168.56```**, en aquest és **```192.168.56.122```**.
