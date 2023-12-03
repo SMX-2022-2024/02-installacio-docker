@@ -45,7 +45,7 @@ cd ~/c01-contenidor-nginx
 sudo docker container run --name c01-nginx -d nginx
 ```
 
-## [Més informació a **```docker container run```**](./opcions-de-les-comandes-docker.md#opcions-de-la-comanda-docker-container-run-options)
+## [Més informació a **```docker container run```**](./files/opcions-de-les-comandes-docker.md#opcions-de-la-comanda-docker-container-run-options)
 
 ### Descripció:
 
