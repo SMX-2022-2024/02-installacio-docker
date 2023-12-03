@@ -84,8 +84,6 @@ Si no ens apareix a l'hora de llistar les imatges, llavors cal descarregar-la.
 
 **Pas 2.2**: Per obtenir una imatge descarregant-la de [**```hub.docker.com```**](https://hub.docker.com/).
 
-
-
 <hr>
 
 **Pas 3**: Creació i posada en marxa del contenidor amb el servidor web **```nginx```**.
@@ -208,12 +206,7 @@ Ara que ja coneixem l'**adreça IP** amb la que podem accedir al nostre servidor
 
 ![Alt text](./images/image-001-welcome-nginx.png)
 
-Allotjament d'algun contingut estàtic senzill
-
-
-
-
-
+<!-- Allotjament d'algun contingut estàtic senzill -->
 
 <!-- **Pas 2**: Descarrega dels fitxers del web site.
 
