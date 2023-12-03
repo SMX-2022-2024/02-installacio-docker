@@ -25,7 +25,7 @@ En aquesta activitat crearem un contenidor amb **```nginx```**.
 
 ```
 sudo mkdir ~/c01-contenidor-nginx
-sudo cd ~/c01-contenidor-nginx
+cd ~/c01-contenidor-nginx
 ```
 
 * **Sortida**:
@@ -36,9 +36,134 @@ profe@docker-sxm:~$ cd ~/c01-contenidor-nginx
 profe@docker-sxm:~/c01-contenidor-nginx$ 
 ```
 
-<hr>
+**Pas 2**: Creació i posada en marxa del contenidor amb el servidor web **```nginx```**.
 
-**Pas 2**: Descarrega dels fitxers del web site.
+* **Comandes a executar**:
+
+```
+cd ~/c01-contenidor-nginx
+sudo docker container run --name c01-nginx -d nginx
+```
+
+## [Més informació a **```docker container run```**](./opcions-de-les-comandes-docker.md#opcions-de-la-comanda-docker-container-run-options)
+
+### Descripció:
+
+Crea i executa un contenidor nou a partir d'una imatge
+
+### Ús:
+
+```
+docker container run [OPTIONS] IMAGE [COMMAND] [ARG...]
+```
+
+### Explicació de les opcions (**```[OPTIONS]```**) fetes servir amb la comanda **```docker container run```**: 
+
+```
+docker container run --name c01-nginx -d nginx
+```
+
+> **```--name c01-nginx```**
+
+El paràmetre **```--name <nom del contenidor>```**: Assigna un nom al contenidor
+
+
+> **```-d, --detach```**
+
+Executa el contenidor en **segon pla** i mostra per pantalla  l'identificador del contenidor.
+
+> **```nginx => [IMAGE]```**
+ 
+Indica la imatge de docker que es farà servir per crear el contenidor.
+En aquest cas es tracta d'una imatge oficial de **```nginx```**. Si no porta cap etiqueta (**```tag```**) a continuació de la imatge, indica que és la darrera, la més actual (**```latest```**), de les imatges del proveïdor. 
+
+
+* **Sortida**:
+
+```
+profe@docker-sxm:~/c01-contenidor-nginx$ sudo docker container run --name c01-nginx -d nginx
+37f45d7ba037e9350d4efb10b7356759aab715e4103fdd299806d2541818809d
+profe@docker-sxm:~/c01-contenidor-nginx$ sudo docker container ls
+CONTAINER ID   IMAGE     COMMAND                  CREATED         STATUS         PORTS     NAMES
+37f45d7ba037   nginx     "/docker-entrypoint.…"   7 seconds ago   Up 7 seconds   80/tcp    c01-nginx
+profe@docker-sxm:~/c01-contenidor-nginx$ 
+```
+
+**Pas 3**: Comprovació del correcte funcionament del contenidor amb el servidor web **```nginx```**.
+
+Per poder comprovar si funciona el contenidor amb el servidor web **```nginx```**, abans cal esbrinar quina és l'adreça IP que té en nostre servidor virtual.
+
+* **Comandes a executar**:
+
+```bash
+ip a
+```
+
+Aquesta comanda ens mostra de **TOTA** la informació **totes** les **interfície de xarxa** del servidor.
+
+```
+profe@docker-sxm:~/c01-contenidor-nginx$ ip a
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host 
+       valid_lft forever preferred_lft forever
+2: enp0s3: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
+    link/ether 08:00:27:67:51:5c brd ff:ff:ff:ff:ff:ff
+    inet 10.0.2.15/24 metric 100 brd 10.0.2.255 scope global dynamic enp0s3
+       valid_lft 65087sec preferred_lft 65087sec
+    inet6 fe80::a00:27ff:fe67:515c/64 scope link 
+       valid_lft forever preferred_lft forever
+3: enp0s8: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
+    link/ether 08:00:27:d9:b8:85 brd ff:ff:ff:ff:ff:ff
+    inet 192.168.56.122/24 metric 100 brd 192.168.56.255 scope global dynamic enp0s8
+       valid_lft 597sec preferred_lft 597sec
+    inet6 fe80::a00:27ff:fed9:b885/64 scope link 
+       valid_lft forever preferred_lft forever
+4: docker0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default 
+    link/ether 02:42:f6:54:10:34 brd ff:ff:ff:ff:ff:ff
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+       valid_lft forever preferred_lft forever
+    inet6 fe80::42:f6ff:fe54:1034/64 scope link 
+       valid_lft forever preferred_lft forever
+56: veth808d7e6@if55: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master docker0 state UP group default 
+    link/ether 7e:bb:61:c1:0e:ac brd ff:ff:ff:ff:ff:ff link-netnsid 0
+    inet6 fe80::7cbb:61ff:fec1:eac/64 scope link 
+       valid_lft forever preferred_lft forever
+```
+
+Pero a nosaltres, només ens interessa l'informació de l'**interfície de xarxa** que està configurada com **```Host-Only```**, i, si el Virtual Box està amb els valor per defecte, aquestes interfícies tenen una **adreça IP** que comença amb **```192.168.56```**.
+
+* **Comanda a executar**:
+
+```bash
+ip a | grep 192.168.56
+```
+
+* **Sortida**:
+
+```
+profe@docker-sxm:~/c01-contenidor-nginx$ ip a | grep 192.168.56
+    inet 192.168.56.122/24 metric 100 brd 192.168.56.255 scope global dynamic enp0s8
+profe@docker-sxm:~/c01-contenidor-nginx$ 
+```
+
+L'adreça IP que ens interessa és aquella que comença és, en aquest és **```192.168.56.122```**.
+
+Ara que ja coneixem l'**adreça IP** amb la que podem accedir al nostre servidor a taves de l'**interfície de xarxa** que està configurada com **```Host-Only```**, només cal escriure-la a un navegador web del nostre portàtil.
+
+
+![Alt text](./images/image-001-welcome-nginx.png)
+
+Allotjament d'algun contingut estàtic senzill
+
+
+
+
+
+
+<!-- **Pas 2**: Descarrega dels fitxers del web site.
 
 * **Comandes a executar**:
 
@@ -71,9 +196,11 @@ web-exemple.zip                    100%[========================================
 profe@docker-sxm:~/c01-contenidor-nginx$ 
 ```
 
+<hr> 
+
 <hr>
 
-**Pas 3**: Descomprimir el fitxer zip descarregat.
+**Pas 2**: Descomprimir el fitxer zip descarregat.
 
 * **Comandes a executar**:
 
@@ -155,27 +282,4 @@ profe@docker-sxm:~/c01-contenidor-nginx$
 
 <hr>
 
-**Pas 5**: Creació i posada en marxa del contenidor amb el servidor web **```nginx```**.
-
-* **Comandes a executar**:
-
-```
-cd ~/c01-contenidor-nginx
-docker run --name cont-prova1 -v /html:/usr/share/nginx/html:ro -p 80:80 -d nginx
-```
-
-* **Sortida**:
-
-```
-c01-contenidor-nginx# docker run --name cont-prova1 -v /web-exemple:/usr/share/nginx/html:ro -d nginx
-7d3f36cde16a3a2bdf9267eaa7b5a1f03bbea05ad33090cd9e56fd8eddd58c5c
-c01-contenidor-nginx# docker container ls
-CONTAINER ID   IMAGE     COMMAND                  CREATED          STATUS          PORTS     NAMES
-7d3f36cde16a   nginx     "/docker-entrypoint.…"   19 seconds ago   Up 18 seconds   80/tcp    cont-prova1
-c01-contenidor-nginx# 
-```
-
-
-Allotjament d'algun contingut estàtic senzill
-
-
+-->
