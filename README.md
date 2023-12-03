@@ -3,17 +3,10 @@
 En aquesta activitat crearem un contenidor amb **```nginx```**.
 
 > ### Què és nginx?
-><hr>
 >
 > **```nginx```** (pronunciat **```engine-x```**) és un ***servidor intermediari invers*** (**```reverse proxy server```**) de ***codi obert*** (**```open source```**) per als protocols **```HTTP```**, **```HTTPS```**, **```SMTP```**, **```POP3```** i **```IMAP```**, així com un servidor per ***balancejar la càrrega*** (**```load balancer```**), ***memòria cau HTTP*** (**```HTTP cache```**) i un ***servidor web*** (l'origen d'aquest servidor).
 > 
 >El **projecte ```nginx```** va començar amb un fort enfocament en l'alta concurrència, alt rendiment i baix ús de memòria.
-> 
->Té llicència sota la llicència de 2 clàusules tipus BSD ([2-clause BSD-like license](https://opensource.org/license/bsd-2-clause/)) i s'executa a Linux, variants BSD, Mac OS X, Solaris, AIX, HP-UX, així com en altres sabors **```*nix```**.
-> 
->També té un port de prova de concepte per a Microsoft Windows.
-> 
-><hr>
 
 <hr>
 <br>
@@ -74,19 +67,18 @@ docker image COMANDES
 docker image ls
 ```
 
-> **```ls```**
-
-La comanda **```ls```**: Llista les imatges que tenim al nostre servidor.
+La comanda **```ls```**, llista les imatges que tenim al nostre servidor.
 
 > #### Si la imatge **```nginx:latest```** apareix a la llista de les imatges descarregades, llavors ja tenim la tenim descarregada al nostre servidor.
 
 Si no ens apareix a l'hora de llistar les imatges, llavors cal descarregar-la.
 
-**Pas 2.2**: Per obtenir una imatge descarregant-la de [**```hub.docker.com```**](https://hub.docker.com/).
+### **Pas 2.2**: Descarregar la imatge **```nginx:latest```** del lloc web de [**```hub.docker.com```**](https://hub.docker.com/).
+
 
 <hr>
 
-**Pas 3**: Creació i posada en marxa del contenidor amb el servidor web **```nginx```**.
+## **Pas 3**: Creació i posada en marxa del contenidor amb el servidor web **```nginx```**.
 
 * **Comandes a executar**:
 
@@ -95,7 +87,7 @@ cd ~/c01-contenidor-nginx
 sudo docker container run --name c01-nginx -d nginx
 ```
 
-## [Més informació a **```docker container run```**](./files/opcions-de-les-comandes-docker.md#opcions-de-la-comanda-docker-container-run-options)
+## [Més informació a **```docker container run```**](./files/opcions-de-les-comandes-docker.md#comanda-3-docker-container-run)
 
 ### Descripció:
 
@@ -149,7 +141,7 @@ Per poder comprovar si funciona el contenidor amb el servidor web **```nginx```*
 ip a
 ```
 
-Aquesta comanda ens mostra de **TOTA** la informació **totes** les **interfície de xarxa** del servidor.
+Aquesta comanda ens mostra **TOTA** la informació **TOTES** les **interfície de xarxa** del servidor.
 
 ```
 profe@docker-sxm:~/c01-contenidor-nginx$ ip a
@@ -183,7 +175,7 @@ profe@docker-sxm:~/c01-contenidor-nginx$ ip a
        valid_lft forever preferred_lft forever
 ```
 
-Pero a nosaltres, només ens interessa l'informació de l'**interfície de xarxa** que està configurada com **```Host-Only```**, i, si el Virtual Box està amb els valor per defecte, aquestes interfícies tenen una **adreça IP** que comença amb **```192.168.56```**.
+Pero a nosaltres, només ens interessa l'informació de l'**interfície de xarxa** que està configurada com **```Host-Only```**, i, si el **Virtual Box** està amb els valor per defecte, aquestes interfícies tenen una **adreça IP** que comença amb **```192.168.56```**.
 
 * **Comanda a executar**:
 
@@ -199,7 +191,7 @@ profe@docker-sxm:~/c01-contenidor-nginx$ ip a | grep 192.168.56
 profe@docker-sxm:~/c01-contenidor-nginx$ 
 ```
 
-L'adreça IP que ens interessa és aquella que comença és, en aquest és **```192.168.56.122```**.
+L'adreça IP que ens interessa és aquella que comença amb **```192.168.56```**, en aquest és **```192.168.56.122```**.
 
 Ara que ja coneixem l'**adreça IP** amb la que podem accedir al nostre servidor a taves de l'**interfície de xarxa** que està configurada com **```Host-Only```**, només cal escriure-la a un navegador web del nostre portàtil.
 

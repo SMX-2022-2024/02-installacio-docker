@@ -1,7 +1,5 @@
 # Comandes de **```docker```**
 
-<hr>
-
 ## Comanda 1: **```docker image COMANDES```**
 
 ### Descripció:
@@ -29,41 +27,28 @@ docker image COMANDES
   rm          Remove one or more images
   save        Save one or more images to a tar archive (streamed to STDOUT by default)
   tag         Create a tag TARGET_IMAGE that refers to SOURCE_IMAGE
-
-Run 'docker image COMMAND --help' for more information on a command.
 ```
 
 <hr>
 
-## Comanda 2 **```docker pull```**
+## Comanda 2 **```docker image pull```**
 
 ### Descripció:
 
-Crea i executa un contenidor nou a partir d'una imatge
+Descarrega una imatge d'un registre
 
 ### Ús:
 
 ```
-docker container run [OPTIONS] IMAGE [COMMAND] [ARG...]
+docker image pull [OPTIONS] NAME[:TAG|@DIGEST]
 ```
 
-### Opcions de la comanda **```docker container run```** [**```OPTIONS```**]: 
-
+### Opcions de la comanda **```docker image pull```** [**```OPTIONS```**]: 
 ```
-
-Usage:  docker pull [OPTIONS] NAME[:TAG|@DIGEST]
-
-Download an image from a registry
-
-Aliases:
-  docker image pull, docker pull
-
-Options:
   -a, --all-tags                Download all tagged images in the repository
       --disable-content-trust   Skip image verification (default true)
       --platform string         Set platform if server is multi-platform capable
   -q, --quiet                   Suppress verbose output
-profe@docker-sxm:~/c01-contenidor-nginx$ 
 ```
 
 <hr>
