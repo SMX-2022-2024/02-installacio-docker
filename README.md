@@ -2,7 +2,6 @@
 
 En aquesta activitat crearem un contenidor amb **```nginx```**.
 
-
 > ### Què és nginx?
 ><hr>
 >
@@ -19,7 +18,7 @@ En aquesta activitat crearem un contenidor amb **```nginx```**.
 <hr>
 <br>
 
-**Pas 1**: Creació de l'estructura de nostre primer projecte
+## **Pas 1**: Creació de l'estructura de nostre primer projecte
 
 * **Comandes a executar**:
 
@@ -33,10 +32,63 @@ cd ~/c01-contenidor-nginx
 ```
 profe@docker-sxm:~$ sudo mkdir ~/c01-contenidor-nginx
 profe@docker-sxm:~$ cd ~/c01-contenidor-nginx
-profe@docker-sxm:~/c01-contenidor-nginx$ 
+profe@docker-sxm:~/c01-contenidor-nginx$ _ 
 ```
 
-**Pas 2**: Creació i posada en marxa del contenidor amb el servidor web **```nginx```**.
+<hr>
+
+## **Pas 2**: Obtenció de la imatge del servidor web **```nginx```**.
+
+### **Pas 2.1**: Primer cal comprovar <u>*si tenim descarregada localment*</u> la imatge de **```docker```** d'**```nginx```**.
+
+* **Comanda a executar**:
+
+```
+sudo docker image ls
+```
+
+* **Sortida**:
+
+```
+REPOSITORY    TAG       IMAGE ID       CREATED        SIZE
+....
+nginx         latest    a6bd71f48f68   12 days ago    187MB
+....
+```
+
+## [Més informació a **```docker image```**](./files/opcions-de-les-comandes-docker.md#comanda-1-docker-image-comandes)
+
+### Descripció:
+
+Per gestionar de les imatges de **```docker```**
+
+### Ús:
+
+```
+docker image COMANDES
+```
+
+### Explicació de les opcions (**```[OPTIONS]```**) fetes servir amb la comanda **```docker image ls```**: 
+
+```
+docker image ls
+```
+
+> **```ls```**
+
+La comanda **```ls```**: Llista les imatges que tenim al nostre servidor.
+
+> #### Si la imatge **```nginx:latest```** apareix a la llista de les imatges descarregades, llavors ja tenim la tenim descarregada al nostre servidor.
+
+Si no ens apareix a l'hora de llistar les imatges, llavors cal descarregar-la.
+
+**Pas 2.2**: Per obtenir una imatge descarregant-la de [**```hub.docker.com```**](https://hub.docker.com/).
+
+
+
+<hr>
+
+**Pas 3**: Creació i posada en marxa del contenidor amb el servidor web **```nginx```**.
 
 * **Comandes a executar**:
 
