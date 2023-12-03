@@ -125,12 +125,10 @@ En aquest cas es tracta d'una imatge oficial de **```nginx```**. Si no porta cap
 * **Sortida**:
 
 ```
-profe@docker-sxm:~/c01-contenidor-nginx$ sudo docker container run --name c01-nginx -d nginx
-37f45d7ba037e9350d4efb10b7356759aab715e4103fdd299806d2541818809d
-profe@docker-sxm:~/c01-contenidor-nginx$ sudo docker container ls
-CONTAINER ID   IMAGE     COMMAND                  CREATED         STATUS         PORTS     NAMES
-37f45d7ba037   nginx     "/docker-entrypoint.…"   7 seconds ago   Up 7 seconds   80/tcp    c01-nginx
-profe@docker-sxm:~/c01-contenidor-nginx$ 
+profe@docker-sxm:~$ sudo docker container ls
+CONTAINER ID  IMAGE  COMMAND            CREATED       STATUS        PORTS                                   NAMES
+0e7436fc847e  nginx  "/docker-entr..."  1 minut ago   1 minut ago   0.0.0.0:8080->80/tcp, :::8080->80/tcp   c01-nginx
+profe@docker-sxm:~$ _
 ```
 
 **Pas 3**: Comprovació del correcte funcionament del contenidor amb el servidor web **```nginx```**.
@@ -195,10 +193,14 @@ profe@docker-sxm:~/c01-contenidor-nginx$ _
 
 L'adreça IP que ens interessa és aquella que comença amb **```192.168.56```**, en aquest és **```192.168.56.122```**.
 
-Ara que ja coneixem l'**adreça IP** amb la que podem accedir al nostre servidor a taves de l'**interfície de xarxa** que està configurada com **```Host-Only```**, només cal escriure-la a un navegador web del nostre portàtil.
+Ara que ja coneixem l'**adreça IP** amb la que podem accedir al nostre servidor a taves de l'**interfície de xarxa** que està configurada com **```Host-Only```**, només cal escriure-la a un navegador web del nostre portàtil seguida per **```:8080```**.
 
+En el nostre cas **```192.168.56.122:8080```**
 
 ![Alt text](./images/image-001-welcome-nginx.png)
+
+
+
 
 <!-- Allotjament d'algun contingut estàtic senzill -->
 
