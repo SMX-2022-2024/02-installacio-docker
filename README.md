@@ -104,7 +104,7 @@ docker container run [OPTIONS] IMAGE [COMMAND] [ARG...]
 ### Explicació de les opcions (**```[OPTIONS]```**) fetes servir amb la comanda **```docker container run```**: 
 
 ```
-docker container run --name c01-nginx -d nginx
+sudo docker container run --name c01-nginx -p 8080:80 -d nginx
 ```
 
 > **```--name c01-nginx```**
@@ -115,6 +115,10 @@ El paràmetre **```--name <nom del contenidor>```**: Assigna un nom al contenido
 > **```-d, --detach```**
 
 Executa el contenidor en **segon pla** i mostra per pantalla  l'identificador del contenidor.
+
+> **```-p, --publish list```**
+
+Publica els ports d'un contenidor a l'amfitrió
 
 > **```nginx => [IMAGE]```**
  
@@ -168,10 +172,6 @@ profe@docker-sxm:~/c01-contenidor-nginx$ ip a
     inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
        valid_lft forever preferred_lft forever
     inet6 fe80::42:f6ff:fe54:1034/64 scope link 
-       valid_lft forever preferred_lft forever
-56: veth808d7e6@if55: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master docker0 state UP group default 
-    link/ether 7e:bb:61:c1:0e:ac brd ff:ff:ff:ff:ff:ff link-netnsid 0
-    inet6 fe80::7cbb:61ff:fec1:eac/64 scope link 
        valid_lft forever preferred_lft forever
 ```
 
