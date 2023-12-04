@@ -46,3 +46,4 @@ Per defecte, un contenidor està relativament ben aïllat d'altres contenidors i
 
 **Un contenidor es defineix per la seva imatge**, així com per qualsevol opció de configuració que li proporcioneu quan el creeu o el inicieu. Quan s'elimina un contenidor, desapareixen els canvis en el seu estat que no s'emmagatzemen a l'emmagatzematge persistent.
 
+[Següent **Ordres basiques**](./teo-docker-03-ordres-basiques.md)
