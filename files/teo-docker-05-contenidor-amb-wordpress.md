@@ -312,3 +312,24 @@ En el nostre cas **```192.168.56.122:8085```**
 
 
 ![Alt text](../images/image-006-1a-execucio-wordpress.png)
+
+
+
+
+![Alt text](../images/image-007-wordpress-seleccio-idioma.png)
+
+![Alt text](../images/image-008-wordpress-conf-pws-per-defecte.png)
+
+
+
+Up5(cRBER#tH4azqyH
+
+
+![Alt text](../images/image-009-wordpress.png)
+
+![Alt text](../images/image-10.png)
+
+
+![Alt text](../images/image-11.png)
+
+![Alt text](../images/image-12.png)
