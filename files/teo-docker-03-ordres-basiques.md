@@ -187,6 +187,7 @@ Després d'executar l'ordre anterior, **Docker** mirarà si la imatge de **```he
 
 ### Per més informació podeu consultar [**```docker run --help```**](../files/teo-docker-00-ajuda-de-les-comandes-docker.md#tota-lajuda-de-docker-run---help)
 
+### Podeu trobar més informació a [**```docker run```** a (**```docs.docker.com```**)](https://docs.docker.com/engine/reference/commandline/run/#docker-run)
 
 <hr>
 
@@ -242,7 +243,9 @@ D'altra banda, si preferiu fer-ho d'una manera més visual podeu visitar [Explor
 
 ![image-004-hub-docker-com-search.png](../images/image-004-hub-docker-com-search.png)
 
-### Per més informació podeu consultar [ **```docker search --help```**](../files/teo-docker-00-ajuda-de-les-comandes-docker.md#tota-lajuda-de-docker-search---help)
+### Per més informació podeu consultar [**```docker search --help```**](../files/teo-docker-00-ajuda-de-les-comandes-docker.md#tota-lajuda-de-docker-search---help)
+
+### Podeu trobar més informació a [**```docker search```** a (**```docs.docker.com```**)](https://docs.docker.com/engine/reference/commandline/search/#docker-search)
 
 <hr>
 
@@ -250,13 +253,13 @@ D'altra banda, si preferiu fer-ho d'una manera més visual podeu visitar [Explor
 
 Si només es vol descarregar una imatge perquè estigui disponible, sense executar-la es pot fer servir l'ordre **```docker pull```**, seguit del **nom de la imatge**.
 
-Per exemple, anteriorment, hem trobat, buscant les imatges que hi ha d'**```nginx```** a **```docker hub```**, una imatge per **```ubuntu/nginx```**.
+Anteriorment, hem trobat, buscant les imatges que hi ha d'**```nginx```** a **```docker hub```**, una imatge per **```ubuntu/nginx```**.
 
 > 
 > * **Comanda a executar**:
 > 
 > ```
-> sudo docker search nginx
+> sudo docker search ubuntu/nginx --no-trunc
 > ```
 > 
 > * **Sortida**:
@@ -271,6 +274,8 @@ Per exemple, anteriorment, hem trobat, buscant les imatges que hi ha d'**```ngin
 > Trobem la següent informació: "**```nginx```, un servidor intermediari invers i d'alt rendiment. Manteniment del sistema a llarg termini, ofert per Canonical.**
 
 ### Per més informació podeu consultar [ **```docker pull```**](../files/teo-docker-00-opcions-de-les-comandes-docker.md#comanda-2-docker-image-pull)
+
+### Podeu trobar més informació a [**```docker pull```** a (**```docs.docker.com```**)](https://docs.docker.com/engine/reference/commandline/pull/#docker-pull)
 
 Per tant, si volem descarregar aquesta imatge **```ubuntu/nginx```** cal fer-ho de la següent manera:
 
@@ -296,7 +301,9 @@ docker.io/ubuntu/nginx:latest
 profe@docker-sxm:~$ _
 ```
 
-### Per més informació podeu consultar [ **```docker search --help```**](../files/teo-docker-00-ajuda-de-les-comandes-docker.md#tota-lajuda-de-docker-search---help)
+### Per més informació podeu consultar [ **```docker pull --help```**](../files/teo-docker-00-ajuda-de-les-comandes-docker.md#tota-lajuda-de-docker-search---help)
+
+### Podeu trobar més informació a [**```docker pull```** a (**```docs.docker.com```**)](https://docs.docker.com/engine/reference/commandline/pull/#docker-pull)
 
 <hr>
 
@@ -329,6 +336,12 @@ profe@docker-sxm:~$ _
 
 Mira la mida reduïda de la imatge **```hello-world:latest```**, pesa només **```13.3kB```**!
 Així mateix, mira la columna **IMAGE ID**. Cada imatge, inclosa les personalitzades, té un **ID únic** (**```IMAGE ID```**) que la representa i un **```TAG```**.
+
+### Per més informació podeu consultar [ **```docker pull```**](../files/teo-docker-00-opcions-de-les-comandes-docker.md#comanda-2-docker-image-pull)
+
+### Podeu trobar més informació a [**```docker pull```** a (**```docs.docker.com```**)](https://docs.docker.com/engine/reference/commandline/pull/#docker-pull)
+
+
 
 <hr>
 
@@ -472,7 +485,6 @@ sudo docker image remove REPOSITORY:TAG
 
 Si volguessis esborrar la **imatge** de **```hello-world```** seria de la següent manera. Escrivint docker rmi, seguit del nom de la imatge serà per dos punts de la seva tag.
 
-
 * **Comanda a executar**:
 
 ```
@@ -491,8 +503,6 @@ profe@docker-sxm:~$ _
 > No es pot perquè la imatge la està fent servir el contenidor (```f778dd45c7af```)! 
 
 <hr>
-
-
 
 [Següent **Primer contenidor amb Docker**](./teo-docker-04-primer-contenidor-amb-docker.md)
 
