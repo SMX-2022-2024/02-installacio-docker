@@ -1,20 +1,20 @@
 # Ordres bàsiques de Docker
 
-[## **1.** Ajuda per qualsevol comanda de **```docker```**](#ajuda-per-qualsevol-comanda-de-docker)
+### [**1.** Ajuda per qualsevol comanda de **```docker```**](#ajuda-per-qualsevol-comanda-de-docker)
 
-[## **2.** Executar un contenidor](#executar-un-contenidor)
+### [**2.** Executar un contenidor](#executar-un-contenidor)
 
-[## **3.** Buscar una imatge](#buscar-una-imatge)
+### [**3.** Buscar una imatge](#buscar-una-imatge)
 
-[## **4.** Descarregar una imatge](#descarregar-una-imatge)
+### [**4.** Descarregar una imatge](#descarregar-una-imatge)
 
-[## **5.** Veure les imatges](#veure-les-imatges)
+### [**5.** Veure les imatges](#veure-les-imatges)
 
-[## **6.** Inspeccionar una imatge](#inspeccionar-una-imatge)
+### [**6.** Inspeccionar una imatge](#inspeccionar-una-imatge)
 
-[## **7.** Historial d'una imatge](#historial-duna-imatge)
+### [**7.** Historial d'una imatge](#historial-duna-imatge)
 
-[## **8.** Esborrar una imatge](#esborrar-una-imatge)
+### [**8.** Esborrar una imatge](#esborrar-una-imatge)
 
 <hr>
 
