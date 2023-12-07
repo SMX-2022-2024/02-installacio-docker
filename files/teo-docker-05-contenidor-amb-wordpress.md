@@ -1,7 +1,6 @@
-# Creació d'un contenidor de wordpress amb Docker
+# Creació d'un contenidor de wordpress amb Docker (**```c02-wp```**)
 
 En aquesta activitat crearem un contenidor amb **```wordpress```**.
-
 
 <hr>
 <br>
@@ -327,15 +326,22 @@ Up5(cRBER#tH4azqyH
 
 |Element|Valor|Descripció|
 |---|---|---|
-|Títol del lloc web|SMX||
+|Títol del lloc web|<cognomAlumne><nomAlumne>||
 |Nom d'usuari|profe|Els noms d'usuari solament poden tenir caràcters alfanumèrics, espais, guions baixos, guions, punts, i el símbol @.|
-|Contrasenya||**Important**: Necessitareu aquesta contrasenya per identificar-vos. Deseu-la en un lloc segur.|
-|La vostra adreça electrònica||Comproveu bé aquesta adreça abans de continuar.|
+|Contrasenya|**```G1i2n3e4b5r6o$```**|**Important**: Necessitareu aquesta contrasenya per identificar-vos. Deseu-la en un lloc segur.|
+|La vostra adreça electrònica|<bustiaAlumne>@ginebro.cat|Comproveu bé aquesta adreça abans de continuar.|
 |Visibilitat als motors de cerca|| Desanima els motors de cerca d'indexar aquest lloc web|
+
+![Alt text](../images/image-010-conf-wordpress.png)
 
 <kbd>Instal·la el WordPress</kbd>
 
+![Alt text](../images/image-011-conf-profe-wordpress.png)
+
 ![Alt text](../images/image-009-wordpress.png)
+
+![Alt text](../images/image-012-1a-entrada-profe-wordpress.png)
+
 
 ![Alt text](../images/image-10.png)
 

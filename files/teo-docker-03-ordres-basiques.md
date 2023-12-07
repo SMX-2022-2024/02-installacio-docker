@@ -117,7 +117,6 @@ profe@docker-sxm:~$ sudo docker image list
 REPOSITORY     TAG       IMAGE ID       CREATED        SIZE
 ubuntu         latest    b6548eacb063   6 days ago     77.8MB
 alpine         latest    b541f2080109   6 days ago     7.34MB
-imatge-joan    latest    72817cfce2d3   6 days ago     7.34MB
 ubuntu/nginx   latest    ecd70a659510   8 days ago     140MB
 wordpress      latest    bc823df9ead2   2 weeks ago    668MB
 nginx          latest    a6bd71f48f68   2 weeks ago    187MB
@@ -131,9 +130,9 @@ profe@docker-sxm:~$
 ```
 profe@docker-sxm:~$ sudo docker container list
 CONTAINER ID   IMAGE       COMMAND                  CREATED        STATUS        PORTS                                   NAMES
-2a7adf030085   wordpress   "docker-entrypoint.s…"   16 hours ago   Up 16 hours   0.0.0.0:8085->80/tcp, :::8085->80/tcp   c02-wp-wordpress-1
-60ab6de92f81   mysql:5.7   "docker-entrypoint.s…"   16 hours ago   Up 16 hours   3306/tcp, 33060/tcp                     c02-wp-db-1
+...
 3b95857b4063   nginx       "/docker-entrypoint.…"   3 days ago     Up 3 days     0.0.0.0:8080->80/tcp, :::8080->80/tcp   c01-nginx
+...
 profe@docker-sxm:~$ 
 ```
 
@@ -325,7 +324,6 @@ profe@docker-sxm:~$ sudo docker image list
 REPOSITORY     TAG       IMAGE ID       CREATED        SIZE
 ubuntu         latest    b6548eacb063   6 days ago     77.8MB
 alpine         latest    b541f2080109   6 days ago     7.34MB
-imatge-joan    latest    72817cfce2d3   6 days ago     7.34MB
 ubuntu/nginx   latest    ecd70a659510   8 days ago     140MB
 wordpress      latest    bc823df9ead2   2 weeks ago    668MB
 nginx          latest    a6bd71f48f68   2 weeks ago    187MB

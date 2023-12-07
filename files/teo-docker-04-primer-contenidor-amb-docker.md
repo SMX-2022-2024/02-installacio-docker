@@ -1,4 +1,4 @@
-# Primer contenidor amb Docker
+# Primer contenidor amb Docker (**```c01-nginx```**)
 
 En aquesta activitat crearem un contenidor amb **```nginx```**.
 
@@ -16,16 +16,16 @@ En aquesta activitat crearem un contenidor amb **```nginx```**.
 * **Comandes a executar**:
 
 ```
-sudo mkdir ~/c01-contenidor-nginx
-cd ~/c01-contenidor-nginx
+sudo mkdir ~/c01-nginx
+cd ~/c01-nginx
 ```
 
 * **Sortida**:
 
 ```
-profe@docker-sxm:~$ sudo mkdir ~/c01-contenidor-nginx
-profe@docker-sxm:~$ cd ~/c01-contenidor-nginx
-profe@docker-sxm:~/c01-contenidor-nginx$ _ 
+profe@docker-sxm:~$ sudo mkdir ~/c01-nginx
+profe@docker-sxm:~$ cd ~/c01-nginx
+profe@docker-sxm:~/c01-nginx$ _ 
 ```
 
 <hr>
@@ -43,12 +43,12 @@ sudo docker image ls
 * **Sortida**:
 
 ```
-profe@docker-sxm:~/c01-contenidor-nginx$ sudo docker image ls
+profe@docker-sxm:~/c01-nginx$ sudo docker image ls
 REPOSITORY    TAG       IMAGE ID       CREATED        SIZE
 ....
 nginx         latest    a6bd71f48f68   12 days ago    187MB
 ....
-profe@docker-sxm:~/c01-contenidor-nginx$ 
+profe@docker-sxm:~/c01-nginx$ 
 ```
 
 ## [Més informació a **```docker image```**](teo-docker-00-opcions-de-les-comandes-docker.md#comanda-1-docker-image-comandes)
@@ -84,7 +84,7 @@ Si no ens apareix a l'hora de llistar les imatges, llavors cal descarregar-la.
 * **Comandes a executar**:
 
 ```
-cd ~/c01-contenidor-nginx
+cd ~/c01-nginx
 sudo docker container run --name c01-nginx -d nginx
 ```
 
@@ -146,7 +146,7 @@ ip a
 Aquesta comanda ens mostra **TOTA** la informació **TOTES** les **interfície de xarxa** del servidor.
 
 ```
-profe@docker-sxm:~/c01-contenidor-nginx$ ip a
+profe@docker-sxm:~/c01-nginx$ ip a
 1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
     link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
     inet 127.0.0.1/8 scope host lo
@@ -184,9 +184,9 @@ ip a | grep 192.168.56
 * **Sortida**:
 
 ```
-profe@docker-sxm:~/c01-contenidor-nginx$ ip a | grep 192.168.56
+profe@docker-sxm:~/c01-nginx$ ip a | grep 192.168.56
     inet 192.168.56.122/24 metric 100 brd 192.168.56.255 scope global dynamic enp0s8
-profe@docker-sxm:~/c01-contenidor-nginx$ _
+profe@docker-sxm:~/c01-nginx$ _
 ```
 
 L'adreça IP que ens interessa és aquella que comença amb **```192.168.56```**, en aquest és **```192.168.56.122```**.
@@ -204,15 +204,15 @@ En el nostre cas **```192.168.56.122:8080```**
 * **Comandes a executar**:
 
 ```
-cd ~/c01-contenidor-nginx
+cd ~/c01-nginx
 sudo wget https://github.com/SMX-2022-2024/02-installacio-docker/raw/main/web-exemple.zip
 ```
 
 * **Sortida**:
 
 ```
-profe@docker-sxm:~/c01-contenidor-nginx$ cd ~/c01-contenidor-nginx
-profe@docker-sxm:~/c01-contenidor-nginx$ sudo wget https://github.com/SMX-2022-2024/02-installacio-docker/raw/main/web-exemple.zip
+profe@docker-sxm:~/c01-nginx$ cd ~/c01-nginx
+profe@docker-sxm:~/c01-nginx$ sudo wget https://github.com/SMX-2022-2024/02-installacio-docker/raw/main/web-exemple.zip
 --2023-12-02 19:54:05--  https://github.com/SMX-2022-2024/02-installacio-docker/raw/main/web-exemple.zip
 Resolving github.com (github.com)... 140.82.121.4
 Connecting to github.com (github.com)|140.82.121.4|:443... connected.
@@ -229,7 +229,7 @@ web-exemple.zip                    100%[========================================
 
 2023-12-02 19:54:06 (5.69 MB/s) - ‘web-exemple.zip’ saved [1547642/1547642]
 
-profe@docker-sxm:~/c01-contenidor-nginx$ 
+profe@docker-sxm:~/c01-nginx$ 
 ```
 
 <hr> 
@@ -243,13 +243,13 @@ profe@docker-sxm:~/c01-contenidor-nginx$
 ```
 sudo unzip web-exemple.zip
 sudo mv web-exemple html
-sudo chmod -R 777 ~/c01-contenidor-nginx/html
+sudo chmod -R 777 ~/c01-nginx/html
 ```
 
 * **Sortida**:
 
 ```
-profe@docker-sxm:~/c01-contenidor-nginx$ sudo unzip web-exemple.zip
+profe@docker-sxm:~/c01-nginx$ sudo unzip web-exemple.zip
 Archive:  web-exemple.zip
    creating: web-exemple/
   inflating: web-exemple/vitae-sed-condimentum.html  
@@ -263,24 +263,24 @@ Archive:  web-exemple.zip
   inflating: web-exemple/magna-sed-adipiscing.html  
   inflating: web-exemple/odio-congue-mattis.html
 
-root@docker-sxm:~/c01-contenidor-nginx# ls -l
+root@docker-sxm:~/c01-nginx# ls -l
 total 1516
 drwxrwxr-x 4 root root    4096 Dec  2 18:34 web-exemple
 -rw-r--r-- 1 root root 1547642 Dec  2 19:40 web-exemple.zip
 
-root@docker-sxm:~/c01-contenidor-nginx# mv web-exemple html
+root@docker-sxm:~/c01-nginx# mv web-exemple html
 
-root@docker-sxm:~/c01-contenidor-nginx# ls -l
+root@docker-sxm:~/c01-nginx# ls -l
 total 1516
 drwxrwxr-x 4 root root    4096 Dec  2 18:34 html
 -rw-r--r-- 1 root root 1547642 Dec  2 19:40 web-exemple.zip
 
-root@docker-sxm:~/c01-contenidor-nginx# ls -ld html
+root@docker-sxm:~/c01-nginx# ls -ld html
 drwxrwxr-x 4 root root 4096 Dec  2 18:34 html
 
-root@docker-sxm:~/c01-contenidor-nginx# chmod -R 777 ~/c01-contenidor-nginx/html
+root@docker-sxm:~/c01-nginx# chmod -R 777 ~/c01-nginx/html
 
-root@docker-sxm:~/c01-contenidor-nginx# ls -ld html
+root@docker-sxm:~/c01-nginx# ls -ld html
 drwxrwxrwx 4 root root 4096 Dec  2 18:34 html
 ```
 
@@ -291,15 +291,15 @@ drwxrwxrwx 4 root root 4096 Dec  2 18:34 html
 * **Comandes a executar**:
 
 ```
-cd ~/c01-contenidor-nginx
+cd ~/c01-nginx
 tree -L 2
 ```
 
 * **Sortida**:
 
 ```
-profe@docker-sxm:~/c01-contenidor-nginx$ cd ~/c01-contenidor-nginx
-profe@docker-sxm:~/c01-contenidor-nginx$ tree -L 2
+profe@docker-sxm:~/c01-nginx$ cd ~/c01-nginx
+profe@docker-sxm:~/c01-nginx$ tree -L 2
 .
 ├── html
 │   ├── assets
@@ -313,7 +313,7 @@ profe@docker-sxm:~/c01-contenidor-nginx$ tree -L 2
 └── web-exemple.zip
 
 3 directories, 7 files
-profe@docker-sxm:~/c01-contenidor-nginx$
+profe@docker-sxm:~/c01-nginx$
 ```
 
 <hr>
