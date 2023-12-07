@@ -16,19 +16,19 @@ Totes les **comandes de ```docker```** segueixen el mateix patró:
 
  * **```image```**: per executar comandes relacionades amb les ***imatges*** de **```docker```**.
 
-    Per més informació podeu consultar [**Totes les opcions ```docker image```**](./teo-docker-00-ajuda-de-les-comandes-docker#totes-les-opcions-de-docker-image)
+    Per més informació podeu consultar [**Totes les opcions ```docker image```**](./teo-docker-00-ajuda-de-les-comandes-docker.md#totes-les-opcions-de-docker-image)
 
  * **```container```**: per executar comandes relacionades amb els ***contenidors*** de **```docker```**.
  
-    Per més informació podeu consultar [**Totes les opcions ```docker container```**](./teo-docker-00-ajuda-de-les-comandes-docker#totes-les-opcions-de-docker-container)
+    Per més informació podeu consultar [**Totes les opcions ```docker container```**](./teo-docker-00-ajuda-de-les-comandes-docker.md#totes-les-opcions-de-docker-container)
  
  * **```volume```**: per executar comandes relacionades amb els ***volums*** de **```docker```**.
  
-    Per més informació podeu consultar [**Totes les opcions ```docker volume```**](./teo-docker-00-ajuda-de-les-comandes-docker#totes-les-opcions-de-docker-volume)
+    Per més informació podeu consultar [**Totes les opcions ```docker volume```**](./teo-docker-00-ajuda-de-les-comandes-docker.md#totes-les-opcions-de-docker-volume)
 
  * **```network```**: per executar comandes relacionades amb les ***xarxes*** entre ***contenidors*** de **```docker```**.
  
-    Per més informació podeu consultar [**Totes les opcions ```docker network```**](./teo-docker-00-ajuda-de-les-comandes-docker#totes-les-opcions-de-docker-network)
+    Per més informació podeu consultar [**Totes les opcions ```docker network```**](./teo-docker-00-ajuda-de-les-comandes-docker.md#totes-les-opcions-de-docker-network)
 
 **```opcions```**  per indicar diferents opcions que volem aplicar sobre l'objecte de **```docker```**.
  
