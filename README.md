@@ -6,3 +6,6 @@
 
 ## [Ordres bàsiques de Docker](./files/teo-docker-03-ordres-basiques.md)
 
+## [Primer contenidor amb Docker](./files/teo-docker-04-primer-contenidor-amb-docker.md)
+
+## [Primer contenidor amb *Wordpress*](./files/teo-docker-05-contenidor-amb-wordpress.md)
