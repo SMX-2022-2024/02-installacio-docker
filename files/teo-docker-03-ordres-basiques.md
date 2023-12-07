@@ -1,5 +1,23 @@
 # Ordres bàsiques de Docker
 
+[## **1.** Ajuda per qualsevol comanda de **```docker```**](#ajuda-per-qualsevol-comanda-de-docker)
+
+[## **2.** Executar un contenidor](#executar-un-contenidor)
+
+[## **3.** Buscar una imatge](#buscar-una-imatge)
+
+[## **4.** Descarregar una imatge](#descarregar-una-imatge)
+
+[## **5.** Veure les imatges](#veure-les-imatges)
+
+[## **6.** Inspeccionar una imatge](#inspeccionar-una-imatge)
+
+[## **7.** Historial d'una imatge](#historial-duna-imatge)
+
+[## **8.** Esborrar una imatge](#esborrar-una-imatge)
+
+<hr>
+
 ## Ajuda per qualsevol comanda de **```docker```**
 
 Qualsevol **comanda de ```docker```** té el parametre **```--help```**, el qual ens ofereix informació d'ajuda d'aquell objecte o d'aquella comanda en concret.
