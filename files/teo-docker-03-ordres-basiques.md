@@ -16,7 +16,7 @@ Totes les **comandes de ```docker```** segueixen el mateix patró:
 
  * **```image```**: per executar comandes relacionades amb les ***imatges*** de **```docker```**.
 
-    Per més informació podeu consultar [**Totes les opcions ```docker image```**](./teo-docker-00-ajuda-de-les-comandes-docker.md#totes-les-opcions-de-docker-image)
+    Per més informació podeu consultar [**Totes les opcions ```docker image```**](./teo-docker-00-ajuda-de-les-comandes-docker.md#tota-lajuda-de-docker-image---help)
 
  * **```container```**: per executar comandes relacionades amb els ***contenidors*** de **```docker```**.
  
@@ -117,7 +117,8 @@ profe@docker-sxm:~$ _
 
 Després d'executar l'ordre anterior, **Docker** mirarà si la imatge de **```hello-world```** està descarregada localment, i si no és així la descarregarà. I a continuació crearà un contenidor, aquest contenidor s'executarà, realitzarà la seva funció i s'acabarà d'executar.
 
-Per més informació podeu consultar [**Tota l'ajuda de ```docker run --help```**](#tota-lajuda-de-docker-run---help)
+### Per més informació podeu consultar [**```docker run --help```**](../files/teo-docker-00-ajuda-de-les-comandes-docker.md#tota-lajuda-de-docker-run---help)
+
 
 <hr>
 
@@ -173,7 +174,7 @@ D'altra banda, si preferiu fer-ho d'una manera més visual podeu visitar [Explor
 
 ![image-004-hub-docker-com-search.png](../images/image-004-hub-docker-com-search.png)
 
-Per més informació podeu consultar [**Tota l'ajuda de ```docker search --help```**](#tota-lajuda-de-docker-search---help)
+### Per més informació podeu consultar [ **```docker search --help```**](../files/teo-docker-00-ajuda-de-les-comandes-docker.md#tota-lajuda-de-docker-search---help)
 
 <hr>
 
@@ -201,7 +202,7 @@ Per exemple, anteriorment, hem trobat, buscant les imatges que hi ha d'**```ngin
 > 
 > Trobem la següent informació: "**```nginx```, un servidor intermediari invers i d'alt rendiment. Manteniment del sistema a llarg termini, ofert per Canonical.**
 
-## [Més informació a **```docker pull```**](../files/teo-docker-00-opcions-de-les-comandes-docker.md#comanda-2-docker-image-pull)
+### Per més informació podeu consultar [ **```docker pull```**](../files/teo-docker-00-opcions-de-les-comandes-docker.md#comanda-2-docker-image-pull)
 
 Per tant, si volem descarregar aquesta imatge **```ubuntu/nginx```** cal fer-ho de la següent manera:
 
@@ -227,8 +228,7 @@ docker.io/ubuntu/nginx:latest
 profe@docker-sxm:~$ _
 ```
 
-Per més informació podeu consultar [**Tota l'ajuda de ```docker search --help```**](#tota-lajuda-de-docker-search---help)
-
+### Per més informació podeu consultar [ **```docker search --help```**](../files/teo-docker-00-ajuda-de-les-comandes-docker.md#tota-lajuda-de-docker-search---help)
 
 <hr>
 

@@ -4,7 +4,10 @@
 
 ### **2.** [**Tota l'ajuda de ```docker search --help```**](#tota-lajuda-de-docker-search---help)
 
-### **3.** [**Tota l'ajuda de ```docker search --help```**](#tota)
+### **3.** [**Tota l'ajuda de ```docker image --help```**](#tota-lajuda-de-docker-image---help)
+
+### **4.** [**Tota l'ajuda de ```docker network --help```**](#tota-lajuda-de-docker-network---help)
+
 
 <hr>
 
@@ -161,3 +164,73 @@ Options:
 profe@docker-sxm:~$ 
 ```
 
+
+<hr>
+
+### **Tota l'ajuda de ```docker image --help```**
+
+* **Comanda a executar**:
+
+```
+docker image --help
+```
+
+* **Sortida**:
+
+```
+profe@docker-sxm:~$ docker image --help
+
+Usage:  docker image COMMAND
+
+Manage images
+
+Commands:
+  build       Build an image from a Dockerfile
+  history     Show the history of an image
+  import      Import the contents from a tarball to create a filesystem image
+  inspect     Display detailed information on one or more images
+  load        Load an image from a tar archive or STDIN
+  ls          List images
+  prune       Remove unused images
+  pull        Download an image from a registry
+  push        Upload an image to a registry
+  rm          Remove one or more images
+  save        Save one or more images to a tar archive (streamed to STDOUT by default)
+  tag         Create a tag TARGET_IMAGE that refers to SOURCE_IMAGE
+
+Run 'docker image COMMAND --help' for more information on a command.
+profe@docker-sxm:~$ _
+```
+
+
+<hr>
+
+### **Tota l'ajuda de ```docker network --help```**
+
+* **Comanda a executar**:
+
+```
+docker network --help
+```
+
+* **Sortida**:
+
+```
+profe@docker-sxm:~$ docker network --help
+
+Usage:  docker network COMMAND
+
+Manage networks
+
+Commands:
+  connect     Connect a container to a network
+  create      Create a network
+  disconnect  Disconnect a container from a network
+  inspect     Display detailed information on one or more networks
+  ls          List networks
+  prune       Remove all unused networks
+  rm          Remove one or more networks
+
+Run 'docker network COMMAND --help' for more information on a command.
+profe@docker-sxm:~$ _
+```
