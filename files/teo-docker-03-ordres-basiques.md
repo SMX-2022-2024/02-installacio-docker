@@ -2,19 +2,21 @@
 
 ### [**1.** Ajuda per qualsevol comanda de **```docker```**](#ajuda-per-qualsevol-comanda-de-docker)
 
-### [**2.** Executar un contenidor](#executar-un-contenidor)
+### [**2.** Totes les **comandes de ```docker```** segueixen el mateix patró](#totes-les-comandes-de-docker-segueixen-el-mateix-patró)
 
-### [**3.** Buscar una imatge](#buscar-una-imatge)
+### [**3.** Executar un contenidor](#executar-un-contenidor)
 
-### [**4.** Descarregar una imatge](#descarregar-una-imatge)
+### [**4.** Buscar una imatge](#buscar-una-imatge)
 
-### [**5.** Veure les imatges](#veure-les-imatges)
+### [**5.** Descarregar una imatge](#descarregar-una-imatge)
 
-### [**6.** Inspeccionar una imatge](#inspeccionar-una-imatge)
+### [**6.** Veure les imatges](#veure-les-imatges)
 
-### [**7.** Historial d'una imatge](#historial-duna-imatge)
+### [**7.** Inspeccionar una imatge](#inspeccionar-una-imatge)
 
-### [**8.** Esborrar una imatge](#esborrar-una-imatge)
+### [**8.** Historial d'una imatge](#historial-duna-imatge)
+
+### [**9.** Esborrar una imatge](#esborrar-una-imatge)
 
 <hr>
 
@@ -22,9 +24,57 @@
 
 Qualsevol **comanda de ```docker```** té el parametre **```--help```**, el qual ens ofereix informació d'ajuda d'aquell objecte o d'aquella comanda en concret.
 
-Totes les **comandes de ```docker```** segueixen el mateix patró:
+* **Comanda a executar**:
 
-**```docker <objecte> [opcions] comanda```**
+```
+docker container --help
+```
+
+* **Sortida**:
+
+```
+profe@docker-sxm:~$ docker container --help
+
+Usage:  docker container COMMAND
+
+Manage containers
+
+Commands:
+  attach      Attach local standard input, output, and error streams to a running container
+  commit      Create a new image from a container's changes
+  cp          Copy files/folders between a container and the local filesystem
+  create      Create a new container
+  diff        Inspect changes to files or directories on a container's filesystem
+  exec        Execute a command in a running container
+  export      Export a container's filesystem as a tar archive
+  inspect     Display detailed information on one or more containers
+  kill        Kill one or more running containers
+  logs        Fetch the logs of a container
+  ls          List containers
+  pause       Pause all processes within one or more containers
+  port        List port mappings or a specific mapping for the container
+  prune       Remove all stopped containers
+  rename      Rename a container
+  restart     Restart one or more containers
+  rm          Remove one or more containers
+  run         Create and run a new container from an image
+  start       Start one or more stopped containers
+  stats       Display a live stream of container(s) resource usage statistics
+  stop        Stop one or more running containers
+  top         Display the running processes of a container
+  unpause     Unpause all processes within one or more containers
+  update      Update configuration of one or more containers
+  wait        Block until one or more containers stop, then print their exit codes
+
+Run 'docker container COMMAND --help' for more information on a command.
+profe@docker-sxm:~$ 
+```
+
+<hr>
+
+## Totes les **comandes de ```docker```** segueixen el mateix patró
+
+> **```docker <objecte> [opcions] comanda```**
 
 **```docker```** per indicar que executem una comanda de **```docker```**
 
@@ -48,7 +98,7 @@ Totes les **comandes de ```docker```** segueixen el mateix patró:
  
     Per més informació podeu consultar [**Totes les opcions ```docker network```**](./teo-docker-00-ajuda-de-les-comandes-docker.md#totes-les-opcions-de-docker-network)
 
-**```opcions```**  per indicar diferents opcions que volem aplicar sobre l'objecte de **```docker```**.
+**```opcions```** per indicar diferents opcions que volem aplicar sobre l'objecte de **```docker```**.
  
     Aquesta part és opcional, és a dir, que **NO ÉS OBLIGATÒRIA**.
 
@@ -148,7 +198,7 @@ Per cercar una imatge podem fer servir l'ordre **```docker search```**. El que f
 
 A **```Dockerhub```** hi ha imatges de **```mysql```**, de **```nginx```**, d'**```alpine linux```**, de **```python```**, de **```django```**, **```wordpress```**, **```ghost```** i gairebé qualsevol altra tecnologia que puguis anomenar.
 
-Si volem buscar totes les imatges que hi ha d'**```nginx```**  a **```docker hub```**, ho farem de la següent manera.
+Si volem buscar totes les imatges que hi ha d'**```nginx```** a **```docker hub```**, ho farem de la següent manera.
 
 * **Comanda a executar**:
 
@@ -200,7 +250,7 @@ D'altra banda, si preferiu fer-ho d'una manera més visual podeu visitar [Explor
 
 Si només es vol descarregar una imatge perquè estigui disponible, sense executar-la es pot fer servir l'ordre **```docker pull```**, seguit del **nom de la imatge**.
 
-Per exemple, anteriorment, hem trobat, buscant les imatges que hi ha d'**```nginx```**  a **```docker hub```**, una imatge per **```ubuntu/nginx```**.
+Per exemple, anteriorment, hem trobat, buscant les imatges que hi ha d'**```nginx```** a **```docker hub```**, una imatge per **```ubuntu/nginx```**.
 
 > 
 > * **Comanda a executar**:
