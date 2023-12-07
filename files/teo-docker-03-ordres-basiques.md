@@ -187,7 +187,7 @@ Després d'executar l'ordre anterior, **Docker** mirarà si la imatge de **```he
 
 ### Per més informació podeu consultar [**```docker run --help```**](../files/teo-docker-00-ajuda-de-les-comandes-docker.md#tota-lajuda-de-docker-run---help)
 
-### Podeu trobar més informació a [**```docker run```** a (**```docs.docker.com```**)](https://docs.docker.com/engine/reference/commandline/run/#docker-run)
+### Podeu trobar més informació a [**```docker run```** a (**```docs.docker.com```**)](https://docs.docker.com/engine/reference/commandline/run/)
 
 <hr>
 
@@ -245,7 +245,7 @@ D'altra banda, si preferiu fer-ho d'una manera més visual podeu visitar [Explor
 
 ### Per més informació podeu consultar [**```docker search --help```**](../files/teo-docker-00-ajuda-de-les-comandes-docker.md#tota-lajuda-de-docker-search---help)
 
-### Podeu trobar més informació a [**```docker search```** a (**```docs.docker.com```**)](https://docs.docker.com/engine/reference/commandline/search/#docker-search)
+### Podeu trobar més informació a [**```docker search```** a (**```docs.docker.com```**)](https://docs.docker.com/engine/reference/commandline/search/)
 
 <hr>
 
@@ -275,7 +275,7 @@ Anteriorment, hem trobat, buscant les imatges que hi ha d'**```nginx```** a **``
 
 ### Per més informació podeu consultar [ **```docker pull```**](../files/teo-docker-00-opcions-de-les-comandes-docker.md#comanda-2-docker-image-pull)
 
-### Podeu trobar més informació a [**```docker pull```** a (**```docs.docker.com```**)](https://docs.docker.com/engine/reference/commandline/pull/#docker-pull)
+### Podeu trobar més informació a [**```docker pull```** a (**```docs.docker.com```**)](https://docs.docker.com/engine/reference/commandline/pull/)
 
 Per tant, si volem descarregar aquesta imatge **```ubuntu/nginx```** cal fer-ho de la següent manera:
 
@@ -301,15 +301,15 @@ docker.io/ubuntu/nginx:latest
 profe@docker-sxm:~$ _
 ```
 
-### Per més informació podeu consultar [ **```docker pull --help```**](../files/teo-docker-00-ajuda-de-les-comandes-docker.md#tota-lajuda-de-docker-search---help)
+### Per més informació podeu consultar [ **```docker pull --help```**](../files/teo-docker-00-ajuda-de-les-comandes-docker.md#ajuda-per-docker-pull)
 
-### Podeu trobar més informació a [**```docker pull```** a (**```docs.docker.com```**)](https://docs.docker.com/engine/reference/commandline/pull/#docker-pull)
+### Podeu trobar més informació a [**```docker pull```** a (**```docs.docker.com```**)](https://docs.docker.com/engine/reference/commandline/pull/)
 
 <hr>
 
 ## Veure les imatges
 
-Si ara executem **```docker images```** apareixerà la nostra imatge descarregada.
+Si ara executem **```docker images list```** apareixerà la nostra imatge descarregada.
 
 * **Comanda a executar**:
 
@@ -339,9 +339,7 @@ Així mateix, mira la columna **IMAGE ID**. Cada imatge, inclosa les personalitz
 
 ### Per més informació podeu consultar [ **```docker pull```**](../files/teo-docker-00-opcions-de-les-comandes-docker.md#comanda-2-docker-image-pull)
 
-### Podeu trobar més informació a [**```docker pull```** a (**```docs.docker.com```**)](https://docs.docker.com/engine/reference/commandline/pull/#docker-pull)
-
-
+### Podeu trobar més informació a [**```docker pull```** a (**```docs.docker.com```**)](https://docs.docker.com/engine/reference/commandline/pull/)
 
 <hr>
 

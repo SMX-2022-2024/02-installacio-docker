@@ -8,7 +8,10 @@
 
 ### **4.** [**Ajuda per ```docker network```**](#ajuda-per-docker-network)
 
-## Totes les opcions de ...
+### **5.** [**Ajuda per ```docker pull```**](#ajuda-per-docker-pull)
+
+
+## Totes les opcions dels *objectes* de **```docker```**
 
 ### **1.** [**Totes les opcions de ```docker image```**](#totes-les-opcions-de-docker-image)
 
@@ -173,7 +176,6 @@ Options:
 profe@docker-sxm:~$ 
 ```
 
-
 <hr>
 
 ### **Ajuda per ```docker image```**
@@ -211,7 +213,6 @@ Run 'docker image COMMAND --help' for more information on a command.
 profe@docker-sxm:~$ _
 ```
 
-
 <hr>
 
 ### **Ajuda per ```docker network```**
@@ -219,13 +220,13 @@ profe@docker-sxm:~$ _
 * **Comanda a executar**:
 
 ```
-docker network
+docker network --help
 ```
 
 * **Sortida**:
 
 ```
-profe@docker-sxm:~$ docker network
+profe@docker-sxm:~$ docker network --help
 
 Usage:  docker network COMMAND
 
@@ -244,7 +245,38 @@ Run 'docker network COMMAND' for more information on a command.
 profe@docker-sxm:~$ _
 ```
 
+<hr>
 
+### **Ajuda per ```docker pull```**
+
+* **Comanda a executar**:
+
+```
+docker pull --help
+```
+
+* **Sortida**:
+
+```
+profe@docker-sxm:~$ docker pull --help
+
+Usage:  docker pull [OPTIONS] NAME[:TAG|@DIGEST]
+
+Download an image from a registry
+
+Aliases:
+  docker image pull, docker pull
+
+Options:
+  -a, --all-tags                Download all tagged images in the repository
+      --disable-content-trust   Skip image verification (default true)
+      --platform string         Set platform if server is multi-platform capable
+  -q, --quiet                   Suppress verbose output
+profe@docker-sxm:~$ 
+```
+
+
+<hr>
 
 ## Totes les opcions de ...
 

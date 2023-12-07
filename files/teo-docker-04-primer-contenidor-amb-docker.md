@@ -77,7 +77,6 @@ Si no ens apareix a l'hora de llistar les imatges, llavors cal descarregar-la.
 
 ### **Pas 2.2**: Descarregar la imatge **```nginx:latest```** del lloc web de [**```hub.docker.com```**](https://hub.docker.com/).
 
-
 <hr>
 
 ## **Pas 3**: Creació i posada en marxa del contenidor amb el servidor web **```nginx```**.
@@ -124,7 +123,6 @@ Publica els ports d'un contenidor a l'amfitrió
  
 Indica la imatge de docker que es farà servir per crear el contenidor.
 En aquest cas es tracta d'una imatge oficial de **```nginx```**. Si no porta cap etiqueta (**```tag```**) a continuació de la imatge, indica que és la darrera, la més actual (**```latest```**), de les imatges del proveïdor. 
-
 
 * **Sortida**:
 
@@ -198,9 +196,6 @@ Ara que ja coneixem l'**adreça IP** amb la que podem accedir al nostre servidor
 En el nostre cas **```192.168.56.122:8080```**
 
 ![Alt text](./images/image-001-welcome-nginx.png)
-
-
-
 
 <!-- Allotjament d'algun contingut estàtic senzill -->
 
