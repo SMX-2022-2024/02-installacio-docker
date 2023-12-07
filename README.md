@@ -1,7 +1,8 @@
 # Teoria docker
 
-## [Introducció](./files/teo-docker-01-intro.md)
+## [Què és Docker i com funciona?](./files/teo-docker-01-intro.md)
 
-## [Arquitectura](./files/teo-docker-02-arquitectura.md)
+## [Arquitectura de Docker](./files/teo-docker-02-arquitectura.md)
 
-## [Ordres basiques](./files/teo-docker-03-ordres-basiques.md)
+## [Ordres bàsiques de Docker](./files/teo-docker-03-ordres-basiques.md)
+

@@ -1,14 +1,14 @@
-# Arquitectura Docker
+# Arquitectura de Docker
 
-**Docker** utilitza una arquitectura client-servidor.
+**Docker** utilitza una arquitectura **```client-servidor```**.
 
-El **client de Docker** es comunica amb el **dimoni Docker**, que s'encarrega de la construcció, l'execució i la distribució dels contenidors Docker.
+El **client de Docker** es comunica amb el **dimoni Docker**, que s'encarrega de la construcció, l'execució i la distribució dels contenidors **Docker**.
 
-El client i el dimoni de Docker es poden executar al mateix sistema o podeu connectar un client de Docker a un dimoni de Docker remot. El client i el dimoni de Docker es comuniquen mitjançant una API REST, mitjançant sòcols UNIX o una interfície de xarxa. Un altre client de Docker és Docker Compose, que us permet treballar amb aplicacions que consisteixen en un conjunt de contenidors.
+El ***client de* Docker** i el ***dimoni de* Docker** es poden executar al mateix sistema o podeu connectar un *client de **Docker*** a un ***dimoni de* Docker** remot. El ***client de* Docker** i el ***dimoni de* Docker** es comuniquen mitjançant una **```API REST```**, mitjançant **```sòcols UNIX```** o una **interfície de xarxa**. Un altre ***client de* Docker** és **```Docker Compose```**, que us permet treballar amb aplicacions que consisteixen en un **conjunt de contenidors**.
 
 ![Alt text](../images/image-003-cli-docker-reg.png)
 
-## El dimoni Docker (**Docker daemon - ```dockerd```**)
+## El dimoni Docker (**```docker daemon```** - **```dockerd```**)
 
 El **dimoni Docker** escolta les sol·licituds de l'**API de Docker** i gestiona objectes de **Docker** com ara ***imatges***, ***contenidors***, ***xarxes*** i ***volums***. Un dimoni també es pot comunicar amb altres dimonis per gestionar els **serveis de Docker**.
 
@@ -34,7 +34,7 @@ Aquesta secció és una breu visió general d'alguns d'aquests objectes.
 
 ### Imatges
 
-Una **imatge** és una **plantilla de només lectura amb instruccions per crear un *contenidor Docker***. Sovint, una imatge es basa en una altra imatge, amb alguna personalització addicional. Per exemple, podeu crear una imatge que es basa en la imatge **```ubuntu```**, però instal·la el **servidor web ```Apache```** i la vostra aplicació, així com els detalls de configuració necessaris perquè la vostra aplicació s'executi.
+Una **imatge** és una **plantilla de només lectura amb instruccions per crear un *contenidor Docker***. Sovint, una imatge es basa en una altra imatge, amb alguna personalització addicional. Per exemple, podeu crear una imatge que es basa en la imatge **```ubuntu```**, però instal·la el **servidor web ```apache```** i la vostra aplicació, així com els detalls de configuració necessaris perquè la vostra aplicació s'executi.
 
 Podeu crear les vostres pròpies imatges o només podeu utilitzar les creades per altres i publicades en un registre. Per crear la vostra pròpia imatge, creeu un **```Dockerfile```** amb una sintaxi senzilla per definir els passos necessaris per crear la imatge i executar-la. Cada instrucció d'un **```Dockerfile```** crea una **capa a la imatge**. Quan canvieu el **```Dockerfile```** i reconstruïu la imatge, només es reconstrueixen les capes que han canviat. Això és part del que fa que les imatges siguin tan lleugeres, petites i ràpides, en comparació amb altres tecnologies de virtualització.
 

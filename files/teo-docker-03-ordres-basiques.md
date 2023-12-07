@@ -1,8 +1,40 @@
 # Ordres bàsiques de Docker
 
+## Ajuda per qualsevol comanda de **```docker```**
+
+Qualsevol comanda de **```docker```** té un parametre el qual ens ofereix informació d'ajuda d'aquella comanda.
+
+Totes les comandes de docker segueixen el mateix patró:
+
+**```docker <objecte> [opcions] comanda```**
+
+**```docker```** per indicar que executem una comanda de **```docker```**
+
+**```<objecte>```** per indicar a sobre quin objecte de **```docker```** executem la comanda de **```docker```**.
+  Els **```objectes```** que ferem servir nosaltres son:
+
+ * **```image```**: per executar comandes relacionades amb les ***imatges***
+    Per més informació podeu consultar [**Totes les opcions ```docker image```**](#totes-les-opcions-de-docker-image)
+
+ * **```container```**: per executar comandes relacionades amb els ***contenidors***
+    Per més informació podeu consultar [**Totes les opcions ```docker container```**](#totes-les-opcions-de-docker-container)
+ 
+ * **```volume```**: per executar comandes relacionades amb els ***volums***
+    Per més informació podeu consultar [**Totes les opcions ```docker volume```**](#totes-les-opcions-de-docker-volume)
+
+ * **```network```**: per executar comandes relacionades amb les ***xarxes*** entre contenidors
+    Per més informació podeu consultar [**Totes les opcions ```docker network```**](#totes-les-opcions-de-docker-network)
+
+**```opcions```** 
+
+**```comanda```**
+
+
+<hr>
+
 ## Executar un contenidor
 
-Per executar un contenidor farem servir l'ordre **```run```** i el **nom de la imatge** de la qual derivarà. Es pot especificar com es vol que s'anomeni el teu contenidor amb l'opció **```--name```**.
+Per **executar un contenidor** farem servir l'ordre **```run```** i el **nom de la imatge** de la qual derivarà. Es pot especificar com es vol que s'anomeni el teu contenidor amb l'opció **```--name```**.
 
 * **Comanda a executar**:
 
@@ -39,31 +71,9 @@ For more examples and ideas, visit:
 profe@docker-sxm:~$ _
 ```
 
-Després d'executar l'ordre anterior, Docker mirarà si la imatge de hello-world està descarregada localment, i ssi no és així la descarregarà. I a continuació crearà un contenidor, aquest contenidor s'executarà, realitzarà la seva funció i s'acabarà d'executar.
+Després d'executar l'ordre anterior, **Docker** mirarà si la imatge de **```hello-world```** està descarregada localment, i si no és així la descarregarà. I a continuació crearà un contenidor, aquest contenidor s'executarà, realitzarà la seva funció i s'acabarà d'executar.
 
-## Descarregar una imatge
-
-Si només es vol descarregar una imatge perquè estigui disponible, sense executar-la es pot fer servir l'ordre **```docker pull```**, seguit del **nom de la imatge**.
-
-## [Més informació a **```docker pull```**](../files/opcions-de-les-comandes-docker.md#comanda-2-docker-image-pull)
-
-* **Comanda a executar**:
-
-```
-sudo docker pull hello-world
-```
-
-* **Sortida**:
-
-```
-profe@docker-sxm:~$ sudo docker pull hello-world
-Using default tag: latest
-latest: Pulling from library/hello-world
-Digest: sha256:c79d06dfdfd3d3eb04cafd0dc2bacab0992ebc243e083cabe208bac4dd7759e0
-Status: Image is up to date for hello-world:latest
-docker.io/library/hello-world:latest
-profe@docker-sxm:~$
-```
+<hr>
 
 ## Buscar una imatge
 
@@ -72,6 +82,8 @@ La imatge de **```hello-world```** és probablement la més avorrida que hi ha i
 Per cercar una imatge podem fer servir l'ordre **```docker search```**. El que fa aquesta ordre és connectar-se a **```docker hub```** i buscar la imatge que li indiquem.
 
 A **```Dockerhub```** hi ha imatges de **```mysql```**, de **```nginx```**, d'**```alpine linux```**, de **```python```**, de **```django```**, **```wordpress```**, **```ghost```** i gairebé qualsevol altra tecnologia que puguis anomenar.
+
+Si volem buscar totes les imatges que hi ha d'**```nginx```**  a **```docker hub```**, ho farem de la següent manera.
 
 * **Comanda a executar**:
 
@@ -115,6 +127,59 @@ D'altra banda, si preferiu fer-ho d'una manera més visual podeu visitar [Explor
 
 ![image-004-hub-docker-com-search.png](../images/image-004-hub-docker-com-search.png)
 
+<hr>
+
+## Descarregar una imatge
+
+Si només es vol descarregar una imatge perquè estigui disponible, sense executar-la es pot fer servir l'ordre **```docker pull```**, seguit del **nom de la imatge**.
+
+Per exemple, anteriorment, hem trobat, buscant les imatges que hi ha d'**```nginx```**  a **```docker hub```**, una imatge per **```ubuntu/nginx```**.
+
+* **Comanda a executar**:
+
+```
+sudo docker search nginx
+```
+
+* **Sortida**:
+
+```
+profe@docker-sxm:~$ sudo docker search ubuntu/nginx --no-trunc
+NAME           DESCRIPTION                                                                                       STARS     OFFICIAL   AUTOMATED
+ubuntu/nginx   Nginx, a high-performance reverse proxy & web server. Long-term tracks maintained by Canonical.   103                  
+profe@docker-sxm:~$ _
+```
+
+Trobem la següent informació: "**```nginx```, un servidor intermediari invers i d'alt rendiment. Manteniment del sistema a llarg termini, ofert per Canonical.**
+
+## [Més informació a **```docker pull```**](../files/opcions-de-les-comandes-docker.md#comanda-2-docker-image-pull)
+
+Per tant, si volem descarregar aquesta imatge **```ubuntu/nginx```** cal fer-ho de la següent manera:
+
+* **Comanda a executar**:
+
+```
+sudo docker pull ubuntu/nginx
+```
+
+* **Sortida**:
+
+```
+profe@docker-sxm:~$ sudo docker pull ubuntu/nginx
+Using default tag: latest
+latest: Pulling from ubuntu/nginx
+7f5c551db8d8: Pull complete 
+a0d15e118342: Pull complete 
+dc4f35fd17ef: Pull complete 
+6788dc39928d: Pull complete 
+Digest: sha256:363f7087a9ec55fddb087606b0f7a28514cf1bf70462913123e1f7f72a6f11f7
+Status: Downloaded newer image for ubuntu/nginx:latest
+docker.io/ubuntu/nginx:latest
+profe@docker-sxm:~$ _
+```
+
+<hr>
+
 ## Veure les imatges
 
 Si ara executem **```docker images```** apareixerà la nostra imatge descarregada.
@@ -122,22 +187,30 @@ Si ara executem **```docker images```** apareixerà la nostra imatge descarregad
 * **Comanda a executar**:
 
 ```
-sudo docker images
+sudo docker image ls
 ```
 
 * **Sortida**:
 
 
 ```
-profe@docker-sxm:~$ sudo docker images
-REPOSITORY    TAG       IMAGE ID       CREATED        SIZE
-ubuntu        latest    b6548eacb063   3 days ago     77.8MB
-nginx         latest    a6bd71f48f68   13 days ago    187MB
-hello-world   latest    9c7a54a9a43c   7 months ago   13.3kB
-profe@docker-sxm:~$ 
+profe@docker-sxm:~$ sudo docker image ls
+REPOSITORY     TAG       IMAGE ID       CREATED        SIZE
+ubuntu         latest    b6548eacb063   6 days ago     77.8MB
+alpine         latest    b541f2080109   6 days ago     7.34MB
+imatge-joan    latest    72817cfce2d3   6 days ago     7.34MB
+ubuntu/nginx   latest    ecd70a659510   8 days ago     140MB
+wordpress      latest    bc823df9ead2   2 weeks ago    668MB
+nginx          latest    a6bd71f48f68   2 weeks ago    187MB
+mysql          5.7       bdba757bc933   6 weeks ago    501MB
+hello-world    latest    9c7a54a9a43c   7 months ago   13.3kB
+profe@docker-sxm:~$ _
 ```
 
-Mira la mida reduïda de la imatge **```hello-world:latest```**, pesa només **```13.3kB```**! Així mateix, mira la columna **IMAGE ID**. Cada imatge, inclosa les personalitzades, té un **ID únic** (**```IMAGE ID```**) que la representa i un **```TAG```**.
+Mira la mida reduïda de la imatge **```hello-world:latest```**, pesa només **```13.3kB```**!
+Així mateix, mira la columna **IMAGE ID**. Cada imatge, inclosa les personalitzades, té un **ID únic** (**```IMAGE ID```**) que la representa i un **```TAG```**.
+
+<hr>
 
 ## Inspeccionar una imatge
 
@@ -243,6 +316,8 @@ profe@docker-sxm:~$ sudo docker image inspect hello-world
 profe@docker-sxm:~$ _
 ```
 
+<hr>
+
 ## Historial d'una imatge
 
 La comanda **```docker image history```** mostra la història d'una imatge.
@@ -262,6 +337,8 @@ IMAGE          CREATED        CREATED BY                                      SI
 <missing>      7 months ago   /bin/sh -c #(nop) COPY file:201f8f1849e89d53…   13.3kB    
 profe@docker-sxm:~$
 ```
+
+<hr>
 
 ## Esborrar una imatge
 
@@ -292,5 +369,155 @@ profe@docker-sxm:~$ _
 
 > ![WARNING]
 > No es pot perquè la imatge la està fent servir el contenidor (```f778dd45c7af```)! 
+
+<hr>
+
+### Totes les opcions de **```docker image```**
+
+* **Comanda a executar**:
+
+```
+docker image --help
+```
+
+* **Sortida**:
+
+```
+profe@docker-sxm:~$ docker image --help
+
+Usage:  docker image COMMAND
+
+Manage images
+
+Commands:
+  build       Build an image from a Dockerfile
+  history     Show the history of an image
+  import      Import the contents from a tarball to create a filesystem image
+  inspect     Display detailed information on one or more images
+  load        Load an image from a tar archive or STDIN
+  ls          List images
+  prune       Remove unused images
+  pull        Download an image from a registry
+  push        Upload an image to a registry
+  rm          Remove one or more images
+  save        Save one or more images to a tar archive (streamed to STDOUT by default)
+  tag         Create a tag TARGET_IMAGE that refers to SOURCE_IMAGE
+
+Run 'docker image COMMAND --help' for more information on a command.
+profe@docker-sxm:~$ 
+```
+
+<hr>
+
+### Totes les opcions de **```docker container```**
+
+* **Comanda a executar**:
+
+```
+docker image --help
+```
+
+* **Sortida**:
+
+```
+profe@docker-sxm:~$ docker container --help
+
+Usage:  docker container COMMAND
+
+Manage containers
+
+Commands:
+  attach      Attach local standard input, output, and error streams to a running container
+  commit      Create a new image from a container's changes
+  cp          Copy files/folders between a container and the local filesystem
+  create      Create a new container
+  diff        Inspect changes to files or directories on a container's filesystem
+  exec        Execute a command in a running container
+  export      Export a container's filesystem as a tar archive
+  inspect     Display detailed information on one or more containers
+  kill        Kill one or more running containers
+  logs        Fetch the logs of a container
+  ls          List containers
+  pause       Pause all processes within one or more containers
+  port        List port mappings or a specific mapping for the container
+  prune       Remove all stopped containers
+  rename      Rename a container
+  restart     Restart one or more containers
+  rm          Remove one or more containers
+  run         Create and run a new container from an image
+  start       Start one or more stopped containers
+  stats       Display a live stream of container(s) resource usage statistics
+  stop        Stop one or more running containers
+  top         Display the running processes of a container
+  unpause     Unpause all processes within one or more containers
+  update      Update configuration of one or more containers
+  wait        Block until one or more containers stop, then print their exit codes
+
+Run 'docker container COMMAND --help' for more information on a command.
+```
+
+<hr>
+
+### Totes les opcions de **```docker volume```**
+
+* **Comanda a executar**:
+
+```
+docker volume --help
+```
+
+* **Sortida**:
+
+```
+profe@docker-sxm:~$ docker volume --help
+
+Usage:  docker volume COMMAND
+
+Manage volumes
+
+Commands:
+  create      Create a volume
+  inspect     Display detailed information on one or more volumes
+  ls          List volumes
+  prune       Remove unused local volumes
+  rm          Remove one or more volumes
+  update      Update a volume (cluster volumes only)
+
+Run 'docker volume COMMAND --help' for more information on a command.
+profe@docker-sxm:~$ 
+```
+
+<hr>
+
+### Totes les opcions de **```docker network```**
+
+* **Comanda a executar**:
+
+```
+docker network --help
+```
+
+* **Sortida**:
+
+```
+profe@docker-sxm:~$ docker network --help
+
+Usage:  docker network COMMAND
+
+Manage networks
+
+Commands:
+  connect     Connect a container to a network
+  create      Create a network
+  disconnect  Disconnect a container from a network
+  inspect     Display detailed information on one or more networks
+  ls          List networks
+  prune       Remove all unused networks
+  rm          Remove one or more networks
+
+Run 'docker network COMMAND --help' for more information on a command.
+profe@docker-sxm:~$ 
+```
+
 
 [Següent **Primer contenidor amb Docker**](./teo-docker-04-primer-contenidor-amb-docker.md)

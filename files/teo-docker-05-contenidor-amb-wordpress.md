@@ -11,16 +11,16 @@ En aquesta activitat crearem un contenidor amb **```wordpress```**.
 * **Comandes a executar**:
 
 ```
-sudo mkdir ~/c02-wordpress
-cd ~/c02-wordpress
+sudo mkdir ~/c02-wp
+cd ~/c02-wp
 ```
 
 * **Sortida**:
 
 ```
-profe@docker-sxm:~$ sudo mkdir ~/c02-wordpress
-profe@docker-sxm:~$ cd ~/c02-wordpress
-profe@docker-sxm:~/c02-wordpress$ _ 
+profe@docker-sxm:~$ sudo mkdir ~/c02-wp
+profe@docker-sxm:~$ cd ~/c02-wp
+profe@docker-sxm:~/c02-wp$ _ 
 ```
 
 <hr>
@@ -39,7 +39,7 @@ sudo docker pull wordpress
 * **Sortida**:
 
 ```
-profe@docker-sxm:~/c02-wordpress$ sudo docker pull wordpress
+profe@docker-sxm:~/c02-wp$ sudo docker pull wordpress
 Using default tag: latest
 latest: Pulling from library/wordpress
 b7f91549542c: Pull complete 
@@ -66,7 +66,7 @@ b0e2f5156049: Pull complete
 Digest: sha256:824689613b4e7b027d0d36f264a53a159d6c7adcf5250539e56efe2940651e19
 Status: Downloaded newer image for wordpress:latest
 docker.io/library/wordpress:latest
-profe@docker-sxm:~/c02-wordpress$ _ 
+profe@docker-sxm:~/c02-wp$ _ 
 ```
 
 ### **Pas 2.2**: Descarrega de la imatge **```mysql:5.7```**
@@ -80,12 +80,12 @@ sudo docker pull mysql:5.7
 * **Sortida**:
 
 ```
-profe@docker-sxm:~/c02-wordpress$ sudo docker pull mysql:5.7
+profe@docker-sxm:~/c02-wp$ sudo docker pull mysql:5.7
 5.7: Pulling from library/mysql
 Digest: sha256:f566819f2eee3a60cf5ea6c8b7d1bfc9de62e34268bf62dc34870c4fca8a85d1
 Status: Image is up to date for mysql:5.7
 docker.io/library/mysql:5.7
-profe@docker-sxm:~/c02-wordpress$ _
+profe@docker-sxm:~/c02-wp$ _
 ```
 
 ### **Pas 2.3**: Confirmació de que tenim descarregades les dues imatges
@@ -99,19 +99,19 @@ sudo docker image ls
 * **Sortida**:
 
 ```
-profe@docker-sxm:~/c02-wordpress$ sudo docker pull mysql:5.7
+profe@docker-sxm:~/c02-wp$ sudo docker pull mysql:5.7
 5.7: Pulling from library/mysql
 Digest: sha256:f566819f2eee3a60cf5ea6c8b7d1bfc9de62e34268bf62dc34870c4fca8a85d1
 Status: Image is up to date for mysql:5.7
 docker.io/library/mysql:5.7
-profe@docker-sxm:~/c02-wordpress$ sudo docker image ls
+profe@docker-sxm:~/c02-wp$ sudo docker image ls
 REPOSITORY    TAG       IMAGE ID       CREATED        SIZE
 ...
 wordpress     latest    bc823df9ead2   12 days ago    668MB
 ...
 mysql         5.7       bdba757bc933   5 weeks ago    501MB
 ...
-profe@docker-sxm:~/c02-wordpress$ _
+profe@docker-sxm:~/c02-wp$ _
 ```
 
 <hr>
@@ -123,7 +123,7 @@ profe@docker-sxm:~/c02-wordpress$ _
 * **Comandes a executar**:
 
 ```
-sudo vi ~/c02-wordpress/docker-compose.yml
+sudo vi ~/c02-wp/docker-compose.yml
 ```
 
 I dins del fitxer **```docker-compose.yml```** cal que copieu el següent:
@@ -167,13 +167,13 @@ volumes:
 * **Comandes a executar**:
 
 ```
-sudo cat ~/c02-wordpress/docker-compose.yml
+sudo cat ~/c02-wp/docker-compose.yml
 ```
 
 * **Sortida**:
 
 ```
-profe@docker-sxm:~/c02-wordpress$ cat ~/c02-wordpress/docker-compose.yml
+profe@docker-sxm:~/c02-wp$ cat ~/c02-wp/docker-compose.yml
 version: '3.1'
 
 services:
@@ -205,7 +205,7 @@ services:
 volumes:
   wordpress:
   db:
-profe@docker-sxm:~/c02-wordpress$ _
+profe@docker-sxm:~/c02-wp$ _
 ```
 
 
@@ -214,20 +214,21 @@ profe@docker-sxm:~/c02-wordpress$ _
 * **Comandes a executar**:
 
 ```
-cd ~/c02-wordpress
+cd ~/c02-wp
 sudo docker compose up -d
 ```
 
 * **Sortida**:
 
+
 ```
-profe@docker-sxm:~/c02-wordpress$ cd ~/c02-wordpress
+profe@docker-sxm:~/c02-wp$ cd ~/c02-wp
 sudo docker compose up -d
 [+] Running 3/3
- ✔ Network c02-wordpress_default        Created                                                       0.0s 
- ✔ Container c02-wordpress-db-1         Started                                                       0.0s 
- ✔ Container c02-wordpress-wordpress-1  Started                                                       0.0s 
-profe@docker-sxm:~/c02-wordpress$ _
+ ✔ Network c02-wp_default        Created      0.0s 
+ ✔ Container c02-wp-db-1         Started      0.0s 
+ ✔ Container c02-wp-wordpress-1  Started      0.0s 
+profe@docker-sxm:~/c02-wp$ _
 ```
 
 ## **Pas 5**: Confirmació del que contenidor amb **```wordpress```** està funcionant.
@@ -241,11 +242,11 @@ sudo docker container ls
 * **Sortida**:
 
 ```
-profe@docker-sxm:~/c02-wordpress$ sudo docker container ls
+profe@docker-sxm:~/c02-wp$ sudo docker container ls
 CONTAINER ID   IMAGE       COMMAND                  CREATED          STATUS          PORTS                                   NAMES
-e7ba3cb82aa2   wordpress   "docker-entrypoint.s…"   23 seconds ago   Up 23 seconds   0.0.0.0:8085->80/tcp, :::8085->80/tcp   c02-wordpress-wordpress-1
-340812b43f71   mysql:5.7   "docker-entrypoint.s…"   23 seconds ago   Up 23 seconds   3306/tcp, 33060/tcp                     c02-wordpress-db-1
-profe@docker-sxm:~/c02-wordpress$ _
+e7ba3cb82aa2   wordpress   "docker-entrypoint.s…"   23 seconds ago   Up 23 seconds   0.0.0.0:8085->80/tcp, :::8085->80/tcp   c02-wp-wordpress-1
+340812b43f71   mysql:5.7   "docker-entrypoint.s…"   23 seconds ago   Up 23 seconds   3306/tcp, 33060/tcp                     c02-wp-db-1
+profe@docker-sxm:~/c02-wp$ _
 ```
 
 ## **Pas 6**: Primer accés al contenidor amb **```wordpress```**
@@ -324,6 +325,15 @@ En el nostre cas **```192.168.56.122:8085```**
 
 Up5(cRBER#tH4azqyH
 
+|Element|Valor|Descripció|
+|---|---|---|
+|Títol del lloc web|SMX||
+|Nom d'usuari|profe|Els noms d'usuari solament poden tenir caràcters alfanumèrics, espais, guions baixos, guions, punts, i el símbol @.|
+|Contrasenya||**Important**: Necessitareu aquesta contrasenya per identificar-vos. Deseu-la en un lloc segur.|
+|La vostra adreça electrònica||Comproveu bé aquesta adreça abans de continuar.|
+|Visibilitat als motors de cerca|| Desanima els motors de cerca d'indexar aquest lloc web|
+
+<kbd>Instal·la el WordPress</kbd>
 
 ![Alt text](../images/image-009-wordpress.png)
 
