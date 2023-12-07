@@ -1,12 +1,12 @@
 # Ajuda de les comandes de **```docker```**
 
-### **1.** [**Tota l'ajuda de ```docker run --help```**](#tota-lajuda-de-docker-run---help)
+### **1.** [**Ajuda per ```docker run```**](#ajuda-per-docker-run)
 
-### **2.** [**Tota l'ajuda de ```docker search --help```**](#tota-lajuda-de-docker-search---help)
+### **2.** [**Ajuda per ```docker search```**](#ajuda-per-docker-search)
 
-### **3.** [**Tota l'ajuda de ```docker image --help```**](#tota-lajuda-de-docker-image---help)
+### **3.** [**Ajuda per ```docker image```**](#ajuda-per-docker-image)
 
-### **4.** [**Tota l'ajuda de ```docker network --help```**](#tota-lajuda-de-docker-network---help)
+### **4.** [**Ajuda per ```docker network```**](#ajuda-per-docker-network)
 
 ## Totes les opcions de ...
 
@@ -20,7 +20,7 @@
 
 <hr>
 
-### **Tota l'ajuda de ```docker run --help```**
+### **Ajuda per ```docker run```**
 
 * **Comanda a executar**:
 
@@ -148,7 +148,7 @@ profe@docker-sxm:~$
 
 <hr>
 
-### **Tota l'ajuda de ```docker search --help```**
+### **Ajuda per ```docker search```**
 
 * **Comanda a executar**:
 
@@ -176,7 +176,7 @@ profe@docker-sxm:~$
 
 <hr>
 
-### **Tota l'ajuda de ```docker image --help```**
+### **Ajuda per ```docker image```**
 
 * **Comanda a executar**:
 
@@ -214,18 +214,18 @@ profe@docker-sxm:~$ _
 
 <hr>
 
-### **Tota l'ajuda de ```docker network --help```**
+### **Ajuda per ```docker network```**
 
 * **Comanda a executar**:
 
 ```
-docker network --help
+docker network
 ```
 
 * **Sortida**:
 
 ```
-profe@docker-sxm:~$ docker network --help
+profe@docker-sxm:~$ docker network
 
 Usage:  docker network COMMAND
 
@@ -240,7 +240,7 @@ Commands:
   prune       Remove all unused networks
   rm          Remove one or more networks
 
-Run 'docker network COMMAND --help' for more information on a command.
+Run 'docker network COMMAND' for more information on a command.
 profe@docker-sxm:~$ _
 ```
 

@@ -51,7 +51,7 @@ nginx         latest    a6bd71f48f68   12 days ago    187MB
 profe@docker-sxm:~/c01-contenidor-nginx$ 
 ```
 
-## [Més informació a **```docker image```**](./files/teo-docker-00-opcions-de-les-comandes-docker.md#comanda-1-docker-image-comandes)
+## [Més informació a **```docker image```**](teo-docker-00-opcions-de-les-comandes-docker.md#comanda-1-docker-image-comandes)
 
 ### Descripció:
 
@@ -89,7 +89,7 @@ cd ~/c01-contenidor-nginx
 sudo docker container run --name c01-nginx -d nginx
 ```
 
-## [Més informació a **```docker container run```**](./files/teo-docker-00-opcions-de-les-comandes-docker.md#comanda-3-docker-container-run)
+## [Més informació a **```docker container run```**](teo-docker-00-opcions-de-les-comandes-docker.md#comanda-3-docker-container-run)
 
 ### Descripció:
 
