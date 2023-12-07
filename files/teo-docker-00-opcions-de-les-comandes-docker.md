@@ -1,4 +1,4 @@
-# Comandes de **```docker```**
+# Opcions de les comandes de **```docker```**
 
 ## Comanda 1: **```docker image COMANDES```**
 

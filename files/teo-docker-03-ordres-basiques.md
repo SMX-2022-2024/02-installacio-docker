@@ -2,32 +2,70 @@
 
 ## Ajuda per qualsevol comanda de **```docker```**
 
-Qualsevol comanda de **```docker```** té un parametre el qual ens ofereix informació d'ajuda d'aquella comanda.
+Qualsevol **comanda de ```docker```** té el parametre **```--help```**, el qual ens ofereix informació d'ajuda d'aquell objecte o d'aquella comanda en concret.
 
-Totes les comandes de docker segueixen el mateix patró:
+Totes les **comandes de ```docker```** segueixen el mateix patró:
 
 **```docker <objecte> [opcions] comanda```**
 
 **```docker```** per indicar que executem una comanda de **```docker```**
 
-**```<objecte>```** per indicar a sobre quin objecte de **```docker```** executem la comanda de **```docker```**.
+**```<objecte>```** per indicar sobre quin objecte de **```docker```** executarem la comanda de **```docker```**.
+  
   Els **```objectes```** que ferem servir nosaltres son:
 
- * **```image```**: per executar comandes relacionades amb les ***imatges***
-    Per més informació podeu consultar [**Totes les opcions ```docker image```**](#totes-les-opcions-de-docker-image)
+ * **```image```**: per executar comandes relacionades amb les ***imatges*** de **```docker```**.
+    Per més informació podeu consultar [**Totes les opcions ```docker image```**](./teo-docker-00-ajuda-de-les-comandes-docker#totes-les-opcions-de-docker-image)
 
- * **```container```**: per executar comandes relacionades amb els ***contenidors***
-    Per més informació podeu consultar [**Totes les opcions ```docker container```**](#totes-les-opcions-de-docker-container)
+ * **```container```**: per executar comandes relacionades amb els ***contenidors*** de **```docker```**.
+    Per més informació podeu consultar [**Totes les opcions ```docker container```**](./teo-docker-00-ajuda-de-les-comandes-docker#totes-les-opcions-de-docker-container)
  
- * **```volume```**: per executar comandes relacionades amb els ***volums***
-    Per més informació podeu consultar [**Totes les opcions ```docker volume```**](#totes-les-opcions-de-docker-volume)
+ * **```volume```**: per executar comandes relacionades amb els ***volums*** de **```docker```**.
+    Per més informació podeu consultar [**Totes les opcions ```docker volume```**](./teo-docker-00-ajuda-de-les-comandes-docker#totes-les-opcions-de-docker-volume)
 
- * **```network```**: per executar comandes relacionades amb les ***xarxes*** entre contenidors
-    Per més informació podeu consultar [**Totes les opcions ```docker network```**](#totes-les-opcions-de-docker-network)
+ * **```network```**: per executar comandes relacionades amb les ***xarxes*** entre ***contenidors*** de **```docker```**.
+    Per més informació podeu consultar [**Totes les opcions ```docker network```**](./teo-docker-00-ajuda-de-les-comandes-docker#totes-les-opcions-de-docker-network)
 
-**```opcions```** 
+**```opcions```**  per indicar diferents opcions que volem aplicar sobre l'objecte de **```docker```**.
+    Aquesta part és opcional, és a dir, que **NO ÉS OBLIGATÒRIA**.
 
-**```comanda```**
+**```comanda```** per indicar les comandes que executarem a l'objecte de **```docker```** sobre el que executem la comanda de **```docker```**.
+  Hi ha **```comandes```** que son **globals**, és a dir, que es poden fer servir per qualsevol **```objectes```** de **```docker```**. Com son:
+
+ * **```list```**: per llistar els objectes que tenim localment.
+
+### Per exemple:
+
+  * **```sudo docker image list```** llista totes les imatges que hi ha en el nostre servidor.
+
+```
+profe@docker-sxm:~$ sudo docker image list
+REPOSITORY     TAG       IMAGE ID       CREATED        SIZE
+ubuntu         latest    b6548eacb063   6 days ago     77.8MB
+alpine         latest    b541f2080109   6 days ago     7.34MB
+imatge-joan    latest    72817cfce2d3   6 days ago     7.34MB
+ubuntu/nginx   latest    ecd70a659510   8 days ago     140MB
+wordpress      latest    bc823df9ead2   2 weeks ago    668MB
+nginx          latest    a6bd71f48f68   2 weeks ago    187MB
+mysql          5.7       bdba757bc933   6 weeks ago    501MB
+hello-world    latest    9c7a54a9a43c   7 months ago   13.3kB
+profe@docker-sxm:~$
+```
+
+  * **```sudo docker container list```** llista tots els contenidors que hi ha en el nostre servidor.
+
+```
+profe@docker-sxm:~$ sudo docker container list
+CONTAINER ID   IMAGE       COMMAND                  CREATED        STATUS        PORTS                                   NAMES
+2a7adf030085   wordpress   "docker-entrypoint.s…"   16 hours ago   Up 16 hours   0.0.0.0:8085->80/tcp, :::8085->80/tcp   c02-wp-wordpress-1
+60ab6de92f81   mysql:5.7   "docker-entrypoint.s…"   16 hours ago   Up 16 hours   3306/tcp, 33060/tcp                     c02-wp-db-1
+3b95857b4063   nginx       "/docker-entrypoint.…"   3 days ago     Up 3 days     0.0.0.0:8080->80/tcp, :::8080->80/tcp   c01-nginx
+profe@docker-sxm:~$ 
+```
+
+ * **```remove```**: per esborrar un o més dels objectes que tenim localment.
+
+ * **```prune```**: per netejar els objectes, ja sigui per que estan inactius o aturats, localment.
 
 
 <hr>
@@ -72,6 +110,8 @@ profe@docker-sxm:~$ _
 ```
 
 Després d'executar l'ordre anterior, **Docker** mirarà si la imatge de **```hello-world```** està descarregada localment, i si no és així la descarregarà. I a continuació crearà un contenidor, aquest contenidor s'executarà, realitzarà la seva funció i s'acabarà d'executar.
+
+Per més informació podeu consultar [**Tota l'ajuda de ```docker run --help```**](#tota-lajuda-de-docker-run---help)
 
 <hr>
 
@@ -127,6 +167,8 @@ D'altra banda, si preferiu fer-ho d'una manera més visual podeu visitar [Explor
 
 ![image-004-hub-docker-com-search.png](../images/image-004-hub-docker-com-search.png)
 
+Per més informació podeu consultar [**Tota l'ajuda de ```docker search --help```**](#tota-lajuda-de-docker-search---help)
+
 <hr>
 
 ## Descarregar una imatge
@@ -135,24 +177,25 @@ Si només es vol descarregar una imatge perquè estigui disponible, sense execut
 
 Per exemple, anteriorment, hem trobat, buscant les imatges que hi ha d'**```nginx```**  a **```docker hub```**, una imatge per **```ubuntu/nginx```**.
 
-* **Comanda a executar**:
+> 
+> * **Comanda a executar**:
+> 
+> ```
+> sudo docker search nginx
+> ```
+> 
+> * **Sortida**:
+> 
+> ```
+> profe@docker-sxm:~$ sudo docker search ubuntu/nginx --no-trunc
+> NAME           DESCRIPTION                                                                                       STARS     OFFICIAL   AUTOMATED
+> ubuntu/nginx   Nginx, a high-performance reverse proxy & web server. Long-term tracks maintained by Canonical.   103                  
+> profe@docker-sxm:~$ _
+> ```
+> 
+> Trobem la següent informació: "**```nginx```, un servidor intermediari invers i d'alt rendiment. Manteniment del sistema a llarg termini, ofert per Canonical.**
 
-```
-sudo docker search nginx
-```
-
-* **Sortida**:
-
-```
-profe@docker-sxm:~$ sudo docker search ubuntu/nginx --no-trunc
-NAME           DESCRIPTION                                                                                       STARS     OFFICIAL   AUTOMATED
-ubuntu/nginx   Nginx, a high-performance reverse proxy & web server. Long-term tracks maintained by Canonical.   103                  
-profe@docker-sxm:~$ _
-```
-
-Trobem la següent informació: "**```nginx```, un servidor intermediari invers i d'alt rendiment. Manteniment del sistema a llarg termini, ofert per Canonical.**
-
-## [Més informació a **```docker pull```**](../files/opcions-de-les-comandes-docker.md#comanda-2-docker-image-pull)
+## [Més informació a **```docker pull```**](../files/teo-docker-00-opcions-de-les-comandes-docker.md#comanda-2-docker-image-pull)
 
 Per tant, si volem descarregar aquesta imatge **```ubuntu/nginx```** cal fer-ho de la següent manera:
 
@@ -177,6 +220,9 @@ Status: Downloaded newer image for ubuntu/nginx:latest
 docker.io/ubuntu/nginx:latest
 profe@docker-sxm:~$ _
 ```
+
+Per més informació podeu consultar [**Tota l'ajuda de ```docker search --help```**](#tota-lajuda-de-docker-search---help)
+
 
 <hr>
 
@@ -521,3 +567,4 @@ profe@docker-sxm:~$
 
 
 [Següent **Primer contenidor amb Docker**](./teo-docker-04-primer-contenidor-amb-docker.md)
+
