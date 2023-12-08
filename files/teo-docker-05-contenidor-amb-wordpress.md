@@ -329,7 +329,7 @@ Per defecte ens ofereix una contrasenya, en el cas de l'exemple **```Up5(cRBER#t
 |Element|Valor|Descripció|
 |---|---|---|
 |Títol del lloc web|**```<cognomAlumne><nomAlumne>```**||
-|Nom d'usuari|**```<cognomAlumne>```**|Els **noms d'usuari** solament poden tenir **caràcters alfanumèrics**, **espais**, **guions baixos**, **guions**, **punts**, i el **símbol ```@```**.|
+|Nom d'usuari|**```<cognomAlumne>```**|Els **noms d'usuari** solament poden tenir **caràcters alfanumèrics**,<br>**espais**, **guions baixos**, **guions**, **punts**, i el **símbol ```@```**.|
 |Contrasenya|**```Ginebro1234$```**|**Important**: Necessitareu aquesta contrasenya per identificar-vos. **Deseu-la en un lloc segur**.|
 |La vostra adreça electrònica|**```<bustiaAlumne>@ginebro.cat```**|Comproveu bé aquesta adreça abans de continuar.|
 |Visibilitat als motors de cerca|- [x] | Desanima els motors de cerca d'indexar aquest lloc web|
