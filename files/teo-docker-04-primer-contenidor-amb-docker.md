@@ -52,6 +52,9 @@ profe@docker-sxm:~/c01-nginx$
 ```
 
 > [!TIP]
+>
+> ## Comanda: **```docker image COMANDES```**
+>
 > ### Descripció:
 > 
 > Per gestionar de les imatges de **```docker```**
