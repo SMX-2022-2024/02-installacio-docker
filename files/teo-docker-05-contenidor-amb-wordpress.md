@@ -336,7 +336,7 @@ Per defecte ens ofereix una contrasenya, en el cas de l'exemple **```Up5(cRBER#t
 
 ![Alt text](../images/image-010-conf-wordpress.png)
 
-<kbd>Instal·la el WordPress</kbd>
+Una vegada ja heu introduit totes les dades, per poder continuar cal que pressioneu el botó <kbd>Instal·la el WordPress</kbd>.
 
 ![Alt text](../images/image-011-conf-profe-wordpress.png)
 
