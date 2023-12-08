@@ -342,6 +342,18 @@ Up5(cRBER#tH4azqyH
 
 ![Alt text](../images/image-012-1a-entrada-profe-wordpress.png)
 
+![Alt text](../images/image-013-1a-execucio-pag-exemple.png)
+
+
+
+http://192.168.56.122:8085/admin
+
+![Alt text](../images/image-014-admin.png)
+
+
+![Alt text](../images/image-015-admin-full.png)
+
+
 
 ![Alt text](../images/image-10.png)
 
