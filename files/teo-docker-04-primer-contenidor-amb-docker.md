@@ -197,23 +197,30 @@ A continuació explicarem un a un tots els paràmetres de la comanda:
 
 > ## ```sudo docker container run --name c01-nginx -p 8080:80 -d nginx```
 
-* Explicació del paràmetre **```--name c01-nginx```**:
+* **Explicació del primer dels quatre paràmetres**:
 
 > ## **```--name c01-nginx```**
 
 El paràmetre **```--name <nom del contenidor>```**: Assigna un nom al contenidor
 
+* **Explicació del segon dels quatre paràmetres**:
+
 > ## **```-p, --publish list```**
 
 Publica els ports d'un contenidor a l'amfitrió
+
+* **Explicació del tercer dels quatre paràmetres**:
 
 > ## **```-d, --detach```**
 
 Executa el contenidor en **segon pla** i mostra per pantalla  l'identificador del contenidor.
 
+* **Explicació del darrer  dels quatre paràmetres**:
+
 > ## **```nginx => [IMAGE]```**
  
 Indica la imatge de docker que es farà servir per crear el contenidor.
+
 En aquest cas es tracta d'una imatge oficial de **```nginx```**. Si no porta cap etiqueta (**```tag```**) a continuació de la imatge, indica que és la darrera, la més actual (**```latest```**), de les imatges del proveïdor. 
 
 * **Sortida**:
@@ -225,7 +232,7 @@ CONTAINER ID  IMAGE  COMMAND            CREATED       STATUS        PORTS       
 profe@docker-sxm:~$ _
 ```
 
-**Pas 3**: Comprovació del correcte funcionament del contenidor amb el servidor web **```nginx```**.
+## **Pas 4**: Comprovació del correcte funcionament del contenidor amb el servidor web **```nginx```**.
 
 Per poder comprovar si funciona el contenidor amb el servidor web **```nginx```**, abans cal esbrinar quina és l'adreça IP que té en nostre servidor virtual.
 
