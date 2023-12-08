@@ -332,7 +332,7 @@ Per defecte ens ofereix una contrasenya, en el cas de l'exemple **```Up5(cRBER#t
 |Nom d'usuari|**```<cognomAlumne>```**|Els **noms d'usuari** solament poden tenir<br>**caràcters alfanumèrics**, **espais**,<br>**guions baixos**, **guions**, **punts**, i el **símbol ```@```**.|
 |Contrasenya|**```Ginebro1234$```**|**Important**: Necessitareu aquesta contrasenya<br>per identificar-vos. **Deseu-la en un lloc segur**.|
 |La vostra adreça electrònica|**```<bustiaAlumne>@ginebro.cat```**|Comproveu bé aquesta adreça abans de continuar.|
-|Visibilitat als motors de cerca|- [x] | Desanima els motors de cerca d'indexar aquest lloc web|
+|Visibilitat als motors de cerca|**Desmarcar la casella**| Desanima els motors de cerca d'indexar aquest lloc web|
 
 ![Alt text](../images/image-010-conf-wordpress.png)
 
