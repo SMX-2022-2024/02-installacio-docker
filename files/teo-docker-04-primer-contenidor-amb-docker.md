@@ -195,7 +195,7 @@ Ara que ja coneixem l'**adreça IP** amb la que podem accedir al nostre servidor
 
 En el nostre cas **```192.168.56.122:8080```**
 
-![Alt text](./images/image-001-welcome-nginx.png)
+![Alt text](../images/image-001-welcome-nginx.png)
 
 <!-- Allotjament d'algun contingut estàtic senzill -->
 
