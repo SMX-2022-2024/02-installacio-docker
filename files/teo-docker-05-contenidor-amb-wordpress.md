@@ -314,27 +314,25 @@ Un cop hem posat l'adreça al nostre navegador, ens apareix la primera pàgina d
 
 ![Alt text](../images/image-006-1a-execucio-wordpress.png)
 
-Comencem sel·leccionant l'idioma. El **```català```**.
+Comencem seleccionant l'idioma. 
 
 ![Alt text](../images/image-007-wordpress-seleccio-idioma.png)
 
-Pressionem el botó <kbd>Continua</kbd>
+Escollim **```Català```** i pressionem el botó <kbd>Continua</kbd>
 
 Ens apareix la finestra de **benvinguda** on cal que entrem tot un seguit d'informació per configurar el nostre **wordpress**.
 
 ![Alt text](../images/image-008-wordpress-conf-pws-per-defecte.png)
 
-
-
-Up5(cRBER#tH4azqyH
+Per defecte ens ofereix una contrasenya, en el cas de l'exemple **```Up5(cRBER#tH4azqyH```**, pero per l'activitat cal que introduïm el seguit de dades especifiques següents:
 
 |Element|Valor|Descripció|
 |---|---|---|
-|Títol del lloc web|<cognomAlumne><nomAlumne>||
-|Nom d'usuari|profe|Els noms d'usuari solament poden tenir caràcters alfanumèrics, espais, guions baixos, guions, punts, i el símbol @.|
-|Contrasenya|**```G1i2n3e4b5r6o$```**|**Important**: Necessitareu aquesta contrasenya per identificar-vos. Deseu-la en un lloc segur.|
-|La vostra adreça electrònica|<bustiaAlumne>@ginebro.cat|Comproveu bé aquesta adreça abans de continuar.|
-|Visibilitat als motors de cerca|| Desanima els motors de cerca d'indexar aquest lloc web|
+|Títol del lloc web|**```<cognomAlumne><nomAlumne>```**||
+|Nom d'usuari|**```<cognomAlumne>```**|Els **noms d'usuari** solament poden tenir **caràcters alfanumèrics**, **espais**, **guions baixos**, **guions**, **punts**, i el **símbol ```@```**.|
+|Contrasenya|**```Ginebro1234$```**|**Important**: Necessitareu aquesta contrasenya per identificar-vos. **Deseu-la en un lloc segur**.|
+|La vostra adreça electrònica|**```<bustiaAlumne>@ginebro.cat```**|Comproveu bé aquesta adreça abans de continuar.|
+|Visibilitat als motors de cerca|- [x] | Desanima els motors de cerca d'indexar aquest lloc web|
 
 ![Alt text](../images/image-010-conf-wordpress.png)
 
