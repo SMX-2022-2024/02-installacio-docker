@@ -143,7 +143,7 @@ docker.io/library/nginx:latest
 profe@docker-sxm:~/c01-nginx$_
 ```
 
-Ara si que la imatge **```nginx:latest```** ha d'apareixer a la llista de les imatges descarregades.
+Ara si que la imatge **```nginx:latest```** ha d'apareixer a la llista de les imatges descarregades. Per comprovar-ho, tornem a executar la següent comanda:
 
 * **Comanda a executar**:
 
@@ -170,7 +170,7 @@ profe@docker-sxm:~/c02-wp$
 
 ```
 cd ~/c01-nginx
-sudo docker container run --name c01-nginx -d nginx
+sudo docker container run --name c01-nginx -p 8080:80 -d nginx
 ```
 > [!TIP] 
 >
@@ -191,24 +191,25 @@ sudo docker container run --name c01-nginx -d nginx
 
 ### Explicació de les opcions (**```[OPTIONS]```**) fetes servir amb la comanda **```docker container run```**: 
 
+A continuació explicarem un a un tots els paràmetres de la comanda:
+
 ```
 sudo docker container run --name c01-nginx -p 8080:80 -d nginx
 ```
 
-> **```--name c01-nginx```**
+> ## **```--name c01-nginx```**
 
 El paràmetre **```--name <nom del contenidor>```**: Assigna un nom al contenidor
 
-
-> **```-d, --detach```**
-
-Executa el contenidor en **segon pla** i mostra per pantalla  l'identificador del contenidor.
-
-> **```-p, --publish list```**
+> ## **```-p, --publish list```**
 
 Publica els ports d'un contenidor a l'amfitrió
 
-> **```nginx => [IMAGE]```**
+> ## **```-d, --detach```**
+
+Executa el contenidor en **segon pla** i mostra per pantalla  l'identificador del contenidor.
+
+> ## **```nginx => [IMAGE]```**
  
 Indica la imatge de docker que es farà servir per crear el contenidor.
 En aquest cas es tracta d'una imatge oficial de **```nginx```**. Si no porta cap etiqueta (**```tag```**) a continuació de la imatge, indica que és la darrera, la més actual (**```latest```**), de les imatges del proveïdor. 
@@ -278,11 +279,11 @@ profe@docker-sxm:~/c01-nginx$ ip a | grep 192.168.56
 profe@docker-sxm:~/c01-nginx$ _
 ```
 
-L'adreça IP que ens interessa és aquella que comença amb **```192.168.56```**, en aquest és **```192.168.56.122```**.
+L'adreça IP que ens interessa és aquella que comença amb **```192.168.56```**, en aquest cas és **```192.168.56.122```**.
 
 Ara que ja coneixem l'**adreça IP** amb la que podem accedir al nostre servidor a taves de l'**interfície de xarxa** que està configurada com **```Host-Only```**, només cal escriure-la a un navegador web del nostre portàtil seguida per **```:8080```**.
 
-En el nostre cas **```192.168.56.122:8080```**
+En el nostre cas **```192.168.56.122:8080```**, recordem que el port, és aquell que hem configurat a la comanda per executar el contenidor.
 
 ![Alt text](../images/image-001-welcome-nginx.png)
 
