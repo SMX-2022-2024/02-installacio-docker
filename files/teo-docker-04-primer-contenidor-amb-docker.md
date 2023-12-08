@@ -93,7 +93,8 @@ Si la imatge **```nginx:latest```** apareix a la llista de les imatges descarreg
 
 > [!WARNING]
 > Però, si la imatge **```nginx:latest```** no ens apareix a l'hora de llistar les imatges, llavors cal descarregar-la.
-> El **pas 2.2** **NOMÉS CAL FER-LO** si la imatge **```nginx:latest```** no ens apareix a l'hora de llistar les imatges
+>
+> #### El **pas 2.2** **NOMÉS CAL FER-LO** si la imatge **```nginx:latest```** no ens apareix a l'hora de llistar les imatges
 > <hr>
 
 
