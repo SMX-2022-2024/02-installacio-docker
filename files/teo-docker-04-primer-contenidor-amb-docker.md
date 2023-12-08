@@ -52,7 +52,6 @@ profe@docker-sxm:~/c01-nginx$
 ```
 
 > [!TIP]
-><hr>
 >
 > ## Comanda: **```docker image COMANDES```**
 >
@@ -97,7 +96,6 @@ Però, si la imatge **```nginx:latest```** no ens apareix a l'hora de llistar le
 ### **Pas 2.2**: Descarregar la imatge **```nginx:latest```** del lloc web de [**```hub.docker.com```**](https://hub.docker.com/).
 
 > [!TIP]
-><hr>
 >
 > ## Comanda **```docker image pull```**
 > 
@@ -170,7 +168,6 @@ cd ~/c01-nginx
 sudo docker container run --name c01-nginx -d nginx
 ```
 > [!TIP]
-><hr>
 >
 > ## Comanda **```docker container run```**
 > 
