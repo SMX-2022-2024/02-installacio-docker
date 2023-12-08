@@ -52,7 +52,7 @@ profe@docker-sxm:~/c01-nginx$
 ```
 
 > [!TIP]
->
+><hr>
 > ## Comanda: **```docker image COMANDES```**
 >
 > ### Descripció:
@@ -65,23 +65,97 @@ profe@docker-sxm:~/c01-nginx$
 > docker image COMANDES
 > ```
 > ## [Més informació a **```docker image```**](teo-docker-00-opcions-de-les-comandes-docker.md#comanda-1-docker-image-comandes)
-> 
+><hr>
+
 
 ### Explicació de les opcions (**```[OPTIONS]```**) fetes servir amb la comanda **```docker image ls```**: 
 
+* **Comanda a executar**:
+
 ```
-docker image ls
+sudo docker image ls
 ```
 
 La comanda **```ls```**, llista les imatges que tenim al nostre servidor.
 
-> #### Si la imatge **```nginx:latest```** apareix a la llista de les imatges descarregades, llavors ja tenim la tenim descarregada al nostre servidor.
+* **Sortida**:
 
-Si no ens apareix a l'hora de llistar les imatges, llavors cal descarregar-la.
+```
+profe@docker-sxm:~/c02-wp$ sudo docker image ls 
+REPOSITORY     TAG       IMAGE ID       CREATED        SIZE
+...
+nginx          latest    a6bd71f48f68   2 weeks ago    187MB
+...
+profe@docker-sxm:~/c02-wp$
+```
+
+Si la imatge **```nginx:latest```** apareix a la llista de les imatges descarregades, llavors ja tenim la tenim descarregada al nostre servidor.
+
+Però, si la imatge **```nginx:latest```** no ens apareix a l'hora de llistar les imatges, llavors cal descarregar-la.
 
 ### **Pas 2.2**: Descarregar la imatge **```nginx:latest```** del lloc web de [**```hub.docker.com```**](https://hub.docker.com/).
 
+> [!TIP]
+><hr>
+> ## Comanda **```docker image pull```**
+> 
+> ### Descripció:
+> 
+> Descarrega una imatge d'un registre
+> 
+> ### Ús:
+> 
+> ```
+> docker image pull [OPTIONS] NAME[:TAG|@DIGEST]
+> ```
+>
+> ## [Més informació a **```docker image pull```**](teo-docker-00-opcions-de-les-comandes-docker.md#comanda-2-docker-image-pull)
+><hr>
 
+
+* **Comanda a executar**:
+
+```
+sudo docker image pull nginx
+```
+
+* **Sortida**:
+
+```
+profe@docker-sxm:~/c01-nginx$ sudo docker image pull nginx
+Using default tag: latest
+latest: Pulling from library/nginx
+1f7ce2fa46ab: Pull complete 
+9b16c94bb686: Pull complete 
+9a59d19f9c5b: Pull complete 
+9ea27b074f71: Pull complete 
+c6edf33e2524: Pull complete 
+84b1ff10387b: Pull complete 
+517357831967: Pull complete 
+Digest: sha256:10d1f5b58f74683ad34eb29287e07dab1e90f10af243f151bb50aa5dbb4d62ee
+Status: Downloaded newer image for nginx:latest
+docker.io/library/nginx:latest
+profe@docker-sxm:~/c01-nginx$_
+```
+
+Ara si que la imatge **```nginx:latest```** ha d'apareixer a la llista de les imatges descarregades.
+
+* **Comanda a executar**:
+
+```
+sudo docker image ls
+```
+
+* **Sortida**:
+
+```
+profe@docker-sxm:~/c02-wp$ sudo docker image ls 
+REPOSITORY     TAG       IMAGE ID       CREATED        SIZE
+...
+nginx          latest    a6bd71f48f68   2 weeks ago    187MB
+...
+profe@docker-sxm:~/c02-wp$
+```
 
 <hr>
 
@@ -93,18 +167,22 @@ Si no ens apareix a l'hora de llistar les imatges, llavors cal descarregar-la.
 cd ~/c01-nginx
 sudo docker container run --name c01-nginx -d nginx
 ```
-
-## [Més informació a **```docker container run```**](teo-docker-00-opcions-de-les-comandes-docker.md#comanda-3-docker-container-run)
-
-### Descripció:
-
-Crea i executa un contenidor nou a partir d'una imatge
-
-### Ús:
-
-```
-docker container run [OPTIONS] IMAGE [COMMAND] [ARG...]
-```
+> [!TIP]
+><hr>
+> ## Comanda **```docker container run```**
+> 
+> ### Descripció:
+> 
+> Crea i executa un contenidor nou a partir d'una imatge
+> 
+> ### Ús:
+> 
+> ```
+> docker container run [OPTIONS] IMAGE [COMMAND] [ARG...]
+> ```
+>
+> ## [Més informació a **```docker container run```**](teo-docker-00-opcions-de-les-comandes-docker.md#comanda-3-docker-container-run)
+><hr>
 
 ### Explicació de les opcions (**```[OPTIONS]```**) fetes servir amb la comanda **```docker container run```**: 
 
