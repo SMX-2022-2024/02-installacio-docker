@@ -51,8 +51,9 @@ nginx         latest    a6bd71f48f68   12 days ago    187MB
 profe@docker-sxm:~/c01-nginx$ 
 ```
 
-> [!TIP]
 ><hr>
+> [!TIP]
+>
 > ## Comanda: **```docker image COMANDES```**
 >
 > ### Descripció:
