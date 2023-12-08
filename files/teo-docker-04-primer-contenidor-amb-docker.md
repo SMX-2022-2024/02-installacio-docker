@@ -51,6 +51,7 @@ nginx         latest    a6bd71f48f68   12 days ago    187MB
 profe@docker-sxm:~/c01-nginx$ 
 ```
 
+> [!IMPORTANT]
 > ## [Més informació a **```docker image```**](teo-docker-00-opcions-de-les-comandes-docker.md#comanda-1-docker-image-comandes)
 > 
 > ### Descripció:
