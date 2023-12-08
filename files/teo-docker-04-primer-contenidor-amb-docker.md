@@ -193,9 +193,9 @@ sudo docker container run --name c01-nginx -p 8080:80 -d nginx
 
 A continuació explicarem un a un tots els paràmetres de la comanda:
 
-```
-sudo docker container run --name c01-nginx -p 8080:80 -d nginx
-```
+* **Comanda executada**:
+
+> ## ```sudo docker container run --name c01-nginx -p 8080:80 -d nginx```
 
 > ## **```--name c01-nginx```**
 
