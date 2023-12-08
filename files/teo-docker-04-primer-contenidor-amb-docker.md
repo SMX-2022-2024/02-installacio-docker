@@ -65,7 +65,7 @@ profe@docker-sxm:~/c01-nginx$
 > ```
 > docker image COMANDES
 > ```
-> ## [Més informació a **```docker image```**](teo-docker-00-opcions-de-les-comandes-docker.md#comanda-1-docker-image-comandes)
+> ### [Més informació a **```docker image```**](teo-docker-00-opcions-de-les-comandes-docker.md#comanda-1-docker-image-comandes)
 ><hr>
 
 
@@ -111,7 +111,7 @@ Però, si la imatge **```nginx:latest```** no ens apareix a l'hora de llistar le
 > docker image pull [OPTIONS] NAME[:TAG|@DIGEST]
 > ```
 >
-> ## [Més informació a **```docker image pull```**](teo-docker-00-opcions-de-les-comandes-docker.md#comanda-2-docker-image-pull)
+> ### [Més informació a **```docker image pull```**](teo-docker-00-opcions-de-les-comandes-docker.md#comanda-2-docker-image-pull)
 ><hr>
 
 
@@ -184,7 +184,7 @@ sudo docker container run --name c01-nginx -d nginx
 > docker container run [OPTIONS] IMAGE [COMMAND] [ARG...]
 > ```
 >
-> ## [Més informació a **```docker container run```**](teo-docker-00-opcions-de-les-comandes-docker.md#comanda-3-docker-container-run)
+> ### [Més informació a **```docker container run```**](teo-docker-00-opcions-de-les-comandes-docker.md#comanda-3-docker-container-run)
 ><hr>
 
 ### Explicació de les opcions (**```[OPTIONS]```**) fetes servir amb la comanda **```docker container run```**: 
