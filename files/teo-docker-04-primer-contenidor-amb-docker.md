@@ -37,13 +37,13 @@ profe@docker-sxm:~/c01-nginx$ _
 * **Comanda a executar**:
 
 ```
-sudo docker image ls
+sudo docker image list
 ```
 
 * **Sortida**:
 
 ```
-profe@docker-sxm:~/c01-nginx$ sudo docker image ls
+profe@docker-sxm:~/c01-nginx$ sudo docker image list
 REPOSITORY    TAG       IMAGE ID       CREATED        SIZE
 ....
 nginx         latest    a6bd71f48f68   12 days ago    187MB
@@ -68,12 +68,12 @@ profe@docker-sxm:~/c01-nginx$
 ><hr>
 
 
-### Explicació de les opcions (**```[OPTIONS]```**) fetes servir amb la comanda **```docker image ls```**: 
+### Explicació de les opcions (**```[OPTIONS]```**) fetes servir amb la comanda **```docker image list```**: 
 
 * **Comanda a executar**:
 
 ```
-sudo docker image ls
+sudo docker image list
 ```
 
 La comanda **```ls```**, llista les imatges que tenim al nostre servidor.
@@ -81,7 +81,7 @@ La comanda **```ls```**, llista les imatges que tenim al nostre servidor.
 * **Sortida**:
 
 ```
-profe@docker-sxm:~/c02-wp$ sudo docker image ls 
+profe@docker-sxm:~/c02-wp$ sudo docker image list 
 REPOSITORY     TAG       IMAGE ID       CREATED        SIZE
 ...
 nginx          latest    a6bd71f48f68   2 weeks ago    187MB
@@ -90,6 +90,7 @@ profe@docker-sxm:~/c02-wp$
 ```
 
 Si la imatge **```nginx:latest```** apareix a la llista de les imatges descarregades, llavors ja tenim la tenim descarregada al nostre servidor.
+I ja podem passar al següent pas 
 
 > [!WARNING]
 > Però, si la imatge **```nginx:latest```** no ens apareix a l'hora de llistar les imatges, llavors cal descarregar-la.
@@ -116,7 +117,6 @@ Si la imatge **```nginx:latest```** apareix a la llista de les imatges descarreg
 >
 > ### [Més informació a **```docker image pull```**](teo-docker-00-opcions-de-les-comandes-docker.md#comanda-2-docker-image-pull)
 ><hr>
-
 
 * **Comanda a executar**:
 
@@ -148,13 +148,13 @@ Ara si que la imatge **```nginx:latest```** ha d'apareixer a la llista de les im
 * **Comanda a executar**:
 
 ```
-sudo docker image ls
+sudo docker image list
 ```
 
 * **Sortida**:
 
 ```
-profe@docker-sxm:~/c02-wp$ sudo docker image ls 
+profe@docker-sxm:~/c02-wp$ sudo docker image list 
 REPOSITORY     TAG       IMAGE ID       CREATED        SIZE
 ...
 nginx          latest    a6bd71f48f68   2 weeks ago    187MB
