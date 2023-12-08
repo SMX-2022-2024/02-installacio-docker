@@ -310,13 +310,17 @@ Ara que ja coneixem l'**adreça IP** amb la que podem accedir al nostre servidor
 
 En el nostre cas **```192.168.56.122:8085```**
 
+Un cop hem posat l'adreça al nostre navegador, ens apareix la primera pàgina de la instal·lació de Wordpress. 
 
 ![Alt text](../images/image-006-1a-execucio-wordpress.png)
 
-
-
+Comencem sel·leccionant l'idioma. El **```català```**.
 
 ![Alt text](../images/image-007-wordpress-seleccio-idioma.png)
+
+Pressionem el botó <kbd>Continua</kbd>
+
+Ens apareix la finestra de **benvinguda** on cal que entrem tot un seguit d'informació per configurar el nostre **wordpress**.
 
 ![Alt text](../images/image-008-wordpress-conf-pws-per-defecte.png)
 
