@@ -91,7 +91,11 @@ profe@docker-sxm:~/c02-wp$
 
 Si la imatge **```nginx:latest```** apareix a la llista de les imatges descarregades, llavors ja tenim la tenim descarregada al nostre servidor.
 
-Però, si la imatge **```nginx:latest```** no ens apareix a l'hora de llistar les imatges, llavors cal descarregar-la.
+> [!WARNING]
+> Però, si la imatge **```nginx:latest```** no ens apareix a l'hora de llistar les imatges, llavors cal descarregar-la.
+> El **pas 2.2** **NOMÉS CAL FER-LO** si la imatge **```nginx:latest```** no ens apareix a l'hora de llistar les imatges
+> <hr>
+
 
 ### **Pas 2.2**: Descarregar la imatge **```nginx:latest```** del lloc web de [**```hub.docker.com```**](https://hub.docker.com/).
 
@@ -167,7 +171,7 @@ profe@docker-sxm:~/c02-wp$
 cd ~/c01-nginx
 sudo docker container run --name c01-nginx -d nginx
 ```
-> [!TIP]
+> [!TIP] 
 >
 > ## Comanda **```docker container run```**
 > 
