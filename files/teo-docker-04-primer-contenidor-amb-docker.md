@@ -53,6 +53,7 @@ profe@docker-sxm:~/c01-nginx$
 
 > [!TIP]
 ><hr>
+>
 > ## Comanda: **```docker image COMANDES```**
 >
 > ### Descripció:
@@ -97,6 +98,7 @@ Però, si la imatge **```nginx:latest```** no ens apareix a l'hora de llistar le
 
 > [!TIP]
 ><hr>
+>
 > ## Comanda **```docker image pull```**
 > 
 > ### Descripció:
@@ -169,6 +171,7 @@ sudo docker container run --name c01-nginx -d nginx
 ```
 > [!TIP]
 ><hr>
+>
 > ## Comanda **```docker container run```**
 > 
 > ### Descripció:
