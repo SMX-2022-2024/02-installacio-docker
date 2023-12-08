@@ -197,6 +197,8 @@ A continuació explicarem un a un tots els paràmetres de la comanda:
 
 > ## ```sudo docker container run --name c01-nginx -p 8080:80 -d nginx```
 
+* Explicació del paràmetre **```--name c01-nginx```**:
+
 > ## **```--name c01-nginx```**
 
 El paràmetre **```--name <nom del contenidor>```**: Assigna un nom al contenidor
