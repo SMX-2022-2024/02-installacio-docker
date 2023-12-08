@@ -52,8 +52,6 @@ profe@docker-sxm:~/c01-nginx$
 ```
 
 > [!TIP]
-> ## [Més informació a **```docker image```**](teo-docker-00-opcions-de-les-comandes-docker.md#comanda-1-docker-image-comandes)
-> 
 > ### Descripció:
 > 
 > Per gestionar de les imatges de **```docker```**
@@ -63,6 +61,8 @@ profe@docker-sxm:~/c01-nginx$
 > ```
 > docker image COMANDES
 > ```
+> ## [Més informació a **```docker image```**](teo-docker-00-opcions-de-les-comandes-docker.md#comanda-1-docker-image-comandes)
+> 
 
 ### Explicació de les opcions (**```[OPTIONS]```**) fetes servir amb la comanda **```docker image ls```**: 
 
@@ -77,6 +77,8 @@ La comanda **```ls```**, llista les imatges que tenim al nostre servidor.
 Si no ens apareix a l'hora de llistar les imatges, llavors cal descarregar-la.
 
 ### **Pas 2.2**: Descarregar la imatge **```nginx:latest```** del lloc web de [**```hub.docker.com```**](https://hub.docker.com/).
+
+
 
 <hr>
 
