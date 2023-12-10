@@ -298,7 +298,7 @@ En el nostre cas **```192.168.56.122:8080```**, recordem que el port, és aquell
 
 ## Resum del que hem vist en aquesta activitat.
 
-**1.** Totes les **comandes de ```docker```** segueixen el mateix patró
+**1.** Totes les **comandes de ```docker```** segueixen el mateix patró.
 
 > **```docker <objecte> [opcions] comanda```**
 
@@ -333,11 +333,13 @@ En el nostre cas **```192.168.56.122:8080```**, recordem que el port, és aquell
 > nginx          latest    a6bd71f48f68   2 weeks ago    187MB
 > ```
 
-**4.** La comanda **```sudo docker image pull [OPTIONS] NAME[:TAG|@DIGEST]```** per descarregar la imatge amb el nom **```NAME[:TAG]```** del lloc web de [**```hub.docker.com```**](https://hub.docker.com/).
+**4.** La comanda **```sudo docker image pull [OPTIONS] NAME[:TAG|@DIGEST]```** descarrega la imatge amb el nom **```NAME[:TAG]```** del lloc web de [**```hub.docker.com```**](https://hub.docker.com/).
 
 **5.** La comanda **```docker search [OPTIONS] TERM```** busca la imatge amb el nom **```TERM```** del lloc web de [**```hub.docker.com```**](https://hub.docker.com/). 
 
-**6.** La comanda **```sudo docker container list```** llista de **TOTS els contenidors actius o que estan en marxa** que hi ha en el nostre servidor. Aportant informació dels següents camps:
+**6.** La comanda **```sudo docker container list```** llista de **TOTS els contenidors actius** o **que estan en marxa**, que hi ha en el nostre servidor.
+
+Aportant informació dels següents camps:
 
 * **```CONTAINER ID```**: Mostra l'**identificador únic** del contenidor.
 
@@ -364,11 +366,11 @@ En el nostre cas **```192.168.56.122:8080```**, recordem que el port, és aquell
 
 **7.** La comanda **```sudo docker container list -a```** llista **TOTS els contenidors** que hi ha en el nostre servidor. Fins i tot aquells que **NO estan actius o en marxa**.
 
-**8.** La comanda **```sudo docker container list -q```** de **TOTS els contenidors** que hi ha en el nostre servidor ens mostra només el **```CONTAINER ID```**.
+**8.** La comanda **```sudo docker container list -q```** ens mostra només el **```CONTAINER ID```** de **TOTS els contenidors** que hi ha en el nostre servidor.
 
-**8.** La comanda **```sudo docker container stop [OPTIONS] CONTAINER [CONTAINER...]```** atura un o més dels contenidors actius o que estan en marxa, que li indiquem dels que hi ha en el nostre servidor.
+**9.** La comanda **```sudo docker container stop [OPTIONS] CONTAINER [CONTAINER...]```** **atura un o més contenidors actius** o que estan en marxa en el nostre servidor. Cal que li indiquem l'identificador o el nom del contenidor, i podem passar-li més d'un identificador o més d'un nom del contenidor.
 
-**9.** La comanda **```sudo docker container remove [OPTIONS] CONTAINER [CONTAINER...]```** esborra un o més dels contenidors que **NO estan actius o en marxa**, que li indiquem dels que hi ha en el nostre servidor.
+**9.** La comanda **```sudo docker container remove [OPTIONS] CONTAINER [CONTAINER...]```** **elimina del nostre servidor un o més contenidors**. Cal que li indiquem l'identificador o el nom del contenidor, i podem passar-li més d'un identificador o més d'un nom de contenidor i que **el contenidor estigui aturat**.
 
 
 
