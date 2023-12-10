@@ -115,6 +115,15 @@ profe@docker-sxm:~/c02-wp$ _
 
 <hr>
 
+> ![WARNING]
+> ## **Abans de continuar ...**
+> <hr>
+
+A partir d'ara, ja no farem servir la comanda **```docker run```** per crear un contenidor, sino que farem servir la comanda **```docker compose```**.
+
+
+
+
 ## **Pas 3**: Creació i confirmació del contingut del fitxer de configuració **```docker-compose.yml```**
 
 

@@ -98,7 +98,6 @@ I ja podem passar al següent pas
 > #### El **pas 2.2** **NOMÉS CAL FER-LO** si la imatge **```nginx:latest```** no ens apareix a l'hora de llistar les imatges
 > <hr>
 
-
 ### **Pas 2.2**: Descarregar la imatge **```nginx:latest```** del lloc web de [**```hub.docker.com```**](https://hub.docker.com/).
 
 > [!TIP]
@@ -296,125 +295,79 @@ En el nostre cas **```192.168.56.122:8080```**, recordem que el port, és aquell
 
 ![Alt text](../images/image-001-welcome-nginx.png)
 
-<!-- Allotjament d'algun contingut estàtic senzill -->
 
-<!-- **Pas 2**: Descarrega dels fitxers del web site.
+## Resum del que hem vist en aquesta activitat.
 
-* **Comandes a executar**:
+**1.** Totes les **comandes de ```docker```** segueixen el mateix patró
 
-```
-cd ~/c01-nginx
-sudo wget https://github.com/SMX-2022-2024/02-installacio-docker/raw/main/web-exemple.zip
-```
+> **```docker <objecte> [opcions] comanda```**
 
-* **Sortida**:
+* Si volem fer alguna cosa relacionada amb una **imatge** **```docker image [opcions] comanda```**.
 
-```
-profe@docker-sxm:~/c01-nginx$ cd ~/c01-nginx
-profe@docker-sxm:~/c01-nginx$ sudo wget https://github.com/SMX-2022-2024/02-installacio-docker/raw/main/web-exemple.zip
---2023-12-02 19:54:05--  https://github.com/SMX-2022-2024/02-installacio-docker/raw/main/web-exemple.zip
-Resolving github.com (github.com)... 140.82.121.4
-Connecting to github.com (github.com)|140.82.121.4|:443... connected.
-HTTP request sent, awaiting response... 302 Found
-Location: https://raw.githubusercontent.com/SMX-2022-2024/02-installacio-docker/main/web-exemple.zip [following]
---2023-12-02 19:54:06--  https://raw.githubusercontent.com/SMX-2022-2024/02-installacio-docker/main/web-exemple.zip
-Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 185.199.110.133, 185.199.109.133, 185.199.108.133, ...
-Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|185.199.110.133|:443... connected.
-HTTP request sent, awaiting response... 200 OK
-Length: 1547642 (1.5M) [application/zip]
-Saving to: ‘web-exemple.zip’
+* Si volem fer alguna cosa relacionada amb un **contenidor** **```docker container [opcions] comanda```**.
 
-web-exemple.zip                    100%[================================================================>]   1.48M  5.69MB/s    in 0.3s    
+* Si volem fer alguna cosa relacionada amb un **volum** (***volume***) **```docker volum [opcions] comanda```**.
 
-2023-12-02 19:54:06 (5.69 MB/s) - ‘web-exemple.zip’ saved [1547642/1547642]
+* Si volem fer alguna cosa relacionada amb una **xarxa** (***network***) **```docker network [opcions] comanda```**.
 
-profe@docker-sxm:~/c01-nginx$ 
-```
+**2.** **```nginx```** és un ***servidor web***
 
-<hr> 
+**3.** La comanda **```sudo docker image list```** mostra totes les imatges que tenim descarregades localment en el nostre servidor. Aportant informació dels següents camps:
 
-<hr>
+* **```REPOSITORY```**: Mostra el **nom** de la imatge.
 
-**Pas 2**: Descomprimir el fitxer zip descarregat.
+* **```TAG```**: Mostra l'etiqueta de la imatge.
 
-* **Comandes a executar**:
+* **```IMAGE ID```**: Mostra l'**ID** (***identificador únic***) de la imatge.
 
-```
-sudo unzip web-exemple.zip
-sudo mv web-exemple html
-sudo chmod -R 777 ~/c01-nginx/html
-```
+* **```CREATED```**: Mostra el moment en què es va crear la imatge.
 
-* **Sortida**:
+* **```SIZE```**: Mostra la mida del disc que és ocupada per la imatge.
 
-```
-profe@docker-sxm:~/c01-nginx$ sudo unzip web-exemple.zip
-Archive:  web-exemple.zip
-   creating: web-exemple/
-  inflating: web-exemple/vitae-sed-condimentum.html  
-   creating: web-exemple/assets/
-...
-  inflating: web-exemple/images/pic01.jpg  
-  inflating: web-exemple/images/pic02.jpg  
-  inflating: web-exemple/images/avatar.jpg  
-  inflating: web-exemple/images/pic04.jpg  
-  inflating: web-exemple/rutrum-neque-accumsan.html  
-  inflating: web-exemple/magna-sed-adipiscing.html  
-  inflating: web-exemple/odio-congue-mattis.html
+> #### Exemple
+> 
+> ```
+> REPOSITORY     TAG       IMAGE ID       CREATED        SIZE
+> nginx          latest    a6bd71f48f68   2 weeks ago    187MB
+> ```
 
-root@docker-sxm:~/c01-nginx# ls -l
-total 1516
-drwxrwxr-x 4 root root    4096 Dec  2 18:34 web-exemple
--rw-r--r-- 1 root root 1547642 Dec  2 19:40 web-exemple.zip
+**4.** La comanda **```sudo docker image pull [OPTIONS] NAME[:TAG|@DIGEST]```** per descarregar la imatge amb el nom **```NAME[:TAG]```** del lloc web de [**```hub.docker.com```**](https://hub.docker.com/).
 
-root@docker-sxm:~/c01-nginx# mv web-exemple html
+**5.** La comanda **```docker search [OPTIONS] TERM```** busca la imatge amb el nom **```TERM```** del lloc web de [**```hub.docker.com```**](https://hub.docker.com/). 
 
-root@docker-sxm:~/c01-nginx# ls -l
-total 1516
-drwxrwxr-x 4 root root    4096 Dec  2 18:34 html
--rw-r--r-- 1 root root 1547642 Dec  2 19:40 web-exemple.zip
+**6.** La comanda **```sudo docker container list```** llista de **TOTS els contenidors actius o que estan en marxa** que hi ha en el nostre servidor. Aportant informació dels següents camps:
 
-root@docker-sxm:~/c01-nginx# ls -ld html
-drwxrwxr-x 4 root root 4096 Dec  2 18:34 html
+* **```CONTAINER ID```**: Mostra l'**identificador únic** del contenidor.
 
-root@docker-sxm:~/c01-nginx# chmod -R 777 ~/c01-nginx/html
+* **```IMAGE```**: Mostra la imatge a partir de la quan s'ha creat el contenidor.
 
-root@docker-sxm:~/c01-nginx# ls -ld html
-drwxrwxrwx 4 root root 4096 Dec  2 18:34 html
-```
+* **```COMMAND```**: Mostra la **comanda** executada en iniciar del contenidor.
 
-<hr>
+* **```CREATED```**: **hora de creació**, hora en què es va crear el contenidor.
 
-**Pas 4**: Comprovació de l'estructura de fitxers
+* **```STATUS```**: **Estat del contenidor** amb detalls sobre la durada i l'estat de salut (per exemple, **```created```** (***creat***), **```running```** (***en execució***), **```exited```** (***s'ha sortit***)).
 
-* **Comandes a executar**:
+* **```PORTS```**: **Ports exposats** en crear el contenidor.
 
-```
-cd ~/c01-nginx
-tree -L 2
-```
+* **```NAMES```**: Mostra el **nom** del contenidor.
 
-* **Sortida**:
+> #### Exemple
+> 
+> ```
+> CONTAINER ID  IMAGE  COMMAND            CREATED       STATUS        PORTS                                   NAMES
+> 0e7436fc847e  nginx  "/docker-entr..."  1 minut ago   1 minut ago   0.0.0.0:8080->80/tcp, :::8080->80/tcp   c01-nginx
+> ```
 
-```
-profe@docker-sxm:~/c01-nginx$ cd ~/c01-nginx
-profe@docker-sxm:~/c01-nginx$ tree -L 2
-.
-├── html
-│   ├── assets
-│   ├── images
-│   ├── index.html
-│   ├── magna-sed-adipiscing.html
-│   ├── odio-congue-mattis.html
-│   ├── rutrum-neque-accumsan.html
-│   ├── unic.html
-│   └── vitae-sed-condimentum.html
-└── web-exemple.zip
+**7.** La comanda **```sudo docker container list -a```** llista **TOTS els contenidors** que hi ha en el nostre servidor. Fins i tot aquells que **NO estan actius o en marxa**.
 
-3 directories, 7 files
-profe@docker-sxm:~/c01-nginx$
-```
+**8.** La comanda **```sudo docker container list -q```** de **TOTS els contenidors** que hi ha en el nostre servidor ens mostra només el **```CONTAINER ID```**.
 
-<hr>
+**8.** La comanda **```sudo docker container stop [OPTIONS] CONTAINER [CONTAINER...]```** atura un o més dels contenidors actius o que estan en marxa, que li indiquem dels que hi ha en el nostre servidor.
 
--->
+**9.** La comanda **```sudo docker container remove [OPTIONS] CONTAINER [CONTAINER...]```** esborra un o més dels contenidors que **NO estan actius o en marxa**, que li indiquem dels que hi ha en el nostre servidor.
+
+
+
+**2.** La comanda ```sudo docker image list``` mostra totes les imatges que tenim descarregades localment en el nostre servidor.
+
+**2.** La comanda ```sudo docker image list``` mostra totes les imatges que tenim descarregades localment en el nostre servidor.
