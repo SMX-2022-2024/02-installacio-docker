@@ -324,6 +324,8 @@ En el nostre cas **```192.168.56.122:8080```**, recordem que el port, és aquell
 
 * **```SIZE```**: Mostra la mida del disc que és ocupada per la imatge.
 
+> [!TIP]
+>
 > #### Exemple
 > 
 > ```
@@ -351,6 +353,8 @@ En el nostre cas **```192.168.56.122:8080```**, recordem que el port, és aquell
 
 * **```NAMES```**: Mostra el **nom** del contenidor.
 
+> [!TIP]
+>
 > #### Exemple
 > 
 > ```
