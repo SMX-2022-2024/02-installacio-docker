@@ -531,7 +531,7 @@ profe@docker-sxm:~/teo-compose$ _
 ```
 </details>
 
-**6.5** Atureu l'aplicació, ja sigui executant **```docker compose down```** des del directori del vostre projecte al terminal, o prement <kbd>CTRL</kbd>+<kbd>C</kbd> al terminal original on vau iniciar l'aplicació.
+**6.5** Atureu el sistema amb l'aplicació, ja sigui executant **```docker compose down```** des del directori del vostre projecte al terminal, o prement <kbd>CTRL</kbd>+<kbd>C</kbd> al terminal original on vau iniciar l'aplicació.
 
 * **Comandes a executar**:
 
@@ -551,4 +551,7 @@ profe@docker-sxm:~/teo-compose$ sudo docker compose down
 profe@docker-sxm:~/teo-compose$ 
 ```
 
+Un cop aturat el sistema amb l'aplicació, si tornem a visitar la ruta a on s'exposa en sistema, és a dir, **```http://<adreça IP del servidor>:8000/```**, veureu que ja no apareix res.
+
 ![Alt text](../images/image-018-docker-compose.png)
+
