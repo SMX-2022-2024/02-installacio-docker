@@ -123,14 +123,14 @@ def hola():
 En aquest exemple, **```redis```** és el nom d'amfitrió del contenidor **```redis```** a la xarxa de l'aplicació.
 Utilitzem el **port predeterminat** per a **```Redis```**, **```6379```**.
 
-> [!TIP]
+<!-- > [!TIP]
 >
 > ### Gestió d'errors
 > 
-> Tingueu en compte la manera com la funció **```get_recompte_clics```** escriu.
+> Tingueu en compte la manera com la funció **```get_recompte_clics```** ha estat escrta.
 > Aquest bucle de reintent bàsic ens permet intentar la nostra sol·licitud diverses vegades si el servei **```redis```** no està disponible.
 > Això és útil a l'inici mentre l'aplicació està en línia, però també fa que l'aplicació sigui més resistent si cal reiniciar el servei **```Redis```** en qualsevol moment durant la vida útil de l'aplicació. En un **clúster**, això també ajuda a gestionar les caigudes de connexió momentània entre els nodes.
-> <hr>
+> <hr> -->
 
 ## **Pas 3**: Crear un altre fitxer anomenat **```requirements.txt```** al directori del vostre projecte i enganxeu el codi següent:
 
