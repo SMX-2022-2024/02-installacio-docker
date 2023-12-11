@@ -552,7 +552,7 @@ profe@docker-sxm:~/teo-compose$ sudo docker compose down
 profe@docker-sxm:~/teo-compose$ 
 ```
 
-Un cop aturat el sistema amb l'aplicació, si tornem a visitar la ruta a on s'exposa en sistema, és a dir, **```http://<adreça IP del servidor>:8000/```**, veureu que ja no apareix res.
+Un cop aturat el sistema amb l'aplicació, si tornem a visitar la ruta a on s'exposa en sistema, és a dir, **```<adreça IP del servidor>:8000```**, veureu que ja no apareix res.
 
 ![Alt text](../images/image-018-docker-compose.png)
 
