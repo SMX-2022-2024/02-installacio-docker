@@ -8,4 +8,9 @@
 
 ## [Primer contenidor amb Docker](./files/teo-docker-04-primer-contenidor-amb-docker.md)
 
+## [Resum del que hem vist fins ara](./files/teo-docker-05-resum-del-vist-fins-ara.md)
+
+## [Què és **```docker compose```**](./files/teo-docker-06-docker-compose.md)
+
+
 ## [Primer contenidor amb *Wordpress*](./files/teo-docker-05-contenidor-amb-wordpress.md)
