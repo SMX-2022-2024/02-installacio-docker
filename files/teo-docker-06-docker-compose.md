@@ -115,9 +115,9 @@ def get_recompte_clics():
             time.sleep(0.5)
 
 @app.route('/')
-def hola():
-    count = get_recompte_clics()
-    return 'Hola a tots! He estat visitat {} vegades.\n'.format(count)
+def mostra_visites():
+    comptador = get_recompte_clics()
+    return f'Hola a totes i tots! He estat visitat {comptador} vegades.'
 ```
 
 En aquest exemple, **```redis```** és el nom d'amfitrió del contenidor **```redis```** a la xarxa de l'aplicació.
@@ -127,7 +127,7 @@ Utilitzem el **port predeterminat** per a **```Redis```**, **```6379```**.
 >
 > ### Gestió d'errors
 > 
-> Tingueu en compte la manera com la funció **```get_recompte_clics```** ha estat escrta.
+> Tingueu en compte la manera com la funció **```get_recompte_clics```** ha estat escrita.
 > Aquest bucle de reintent bàsic ens permet intentar la nostra sol·licitud diverses vegades si el servei **```redis```** no està disponible.
 > Això és útil a l'inici mentre l'aplicació està en línia, però també fa que l'aplicació sigui més resistent si cal reiniciar el servei **```Redis```** en qualsevol moment durant la vida útil de l'aplicació. En un **clúster**, això també ajuda a gestionar les caigudes de connexió momentània entre els nodes.
 > <hr> -->
@@ -333,7 +333,7 @@ En aquest cas, el codi es copia de manera estàtica a la imatge en temps de crea
 Hauríeu de veure un missatge al vostre navegador que digui:
 
 ```bash
-Hola a tots! He estat visitat 1 vegades.
+Hola a totes i tots! He estat visitat 1 vegades.
 ```
 
 ![Alt text](../images/image-016-docker-compose.png)
@@ -341,6 +341,7 @@ Hola a tots! He estat visitat 1 vegades.
 **6.3** Actualitza la pàgina.
 
 El nombre de visites hauria d'augmentar.
+
 
 ![Alt text](../images/image-017-docker-compose.png)
 

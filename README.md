@@ -12,5 +12,4 @@
 
 ## [Què és **```docker compose```**](./files/teo-docker-06-docker-compose.md)
 
-
-## [Primer contenidor amb *Wordpress*](./files/teo-docker-05-contenidor-amb-wordpress.md)
+<!-- ## [Primer contenidor amb *Wordpress*](./files/teo-docker-05-contenidor-amb-wordpress.md) -->
