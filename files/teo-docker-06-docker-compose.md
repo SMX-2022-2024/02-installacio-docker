@@ -353,7 +353,7 @@ cd ~/teo-compose
 sudo docker image list
 ```
 
-* **Sortida**: \<pre\>
+* **Sortida**:
 
 <pre>
 profe@docker-sxm:~/teo-compose$ sudo docker image list
@@ -363,7 +363,7 @@ teo-compose-web   latest    61eb4d7a8164   10 minutes ago   214MB
 redis             alpine    d2d4688fcebe   3 days ago       41MB
 ...
 profe@docker-sxm:~/teo-compose$ _
-<pre>
+</pre>
 
 Llistar imatges en aquest moment hauria de tornar **```redis```** i **```teo-compose-web```**.
 
