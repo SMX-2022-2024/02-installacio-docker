@@ -242,6 +242,28 @@ cd ~/teo-compose
 sudo docker compose up -d
 ```
 
+* **Sortida**:
+
+```
+profe@docker-sxm:~/teo-compose$ sudo docker compose up -d
+[+] Running 9/9
+ ✔ redis 8 layers [⣿⣿⣿⣿⣿⣿⣿⣿]      0B/0B      Pulled                                                                                                                5.5s 
+   ✔ 661ff4d9561e Pull complete                                                                                                                                    0.8s 
+   ✔ 963a98d2b6c2 Pull complete   
+...
+ => => naming to docker.io/library/teo-compose-web                                                                                                                 0.0s
+[+] Running 3/3
+ ✔ Network teo-compose_default    Created                                                                                                                          0.1s 
+ ✔ Container teo-compose-web-1    Started                                                                                                                          0.0s 
+ ✔ Container teo-compose-redis-1  Started                                                                                                                          0.1s 
+profe@docker-sxm:~/teo-compose$ 
+```
+
+<details>
+<summary>Fes clic aquí per veure la sortida sencera  ...</summary>
+
+* **Sortida sencera**:
+
 ```
 profe@docker-sxm:~/teo-compose$ sudo docker compose up -d
 [+] Running 9/9
@@ -300,6 +322,7 @@ profe@docker-sxm:~/teo-compose$ sudo docker compose up -d
  ✔ Container teo-compose-redis-1  Started                                                                                                                          0.1s 
 profe@docker-sxm:~/teo-compose$ 
 ```
+</details>
 
 **```docker compose```** extreu una imatge de **```Redis```**, crea una imatge pel codi i inicia els serveis que s'han definit.
 
@@ -355,9 +378,47 @@ sudo docker inspect teo-compose-web
 
 * **Sortida**:
 
-<details>
-<summary>Per veure la sortida sencera  ...</summary>
+```
+profe@docker-sxm:~/teo-compose$ sudo docker inspect teo-compose-web
+[
+    {
+        "Id": "sha256:61eb4d7a8164bc681f8e668ceed66d609fd234590035412beecfe3e2e9f67284",
+        "RepoTags": [
+            "teo-compose-web:latest"
+        ],
+...
+            "Env": [
+                "PATH=/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+...
+                "FLASK_APP=app.py",
+                "FLASK_RUN_HOST=0.0.0.0"
+            ],
+            "Cmd": [
+                "flask",
+                "run"
+            ],
+...
+            "WorkingDir": "/code",
+...
+            "Labels": {
+                "com.docker.compose.project": "teo-compose",
+                "com.docker.compose.service": "web",
+                "com.docker.compose.version": "2.21.0"
+            }
+...
+        },
+        "Metadata": {
+            "LastTagTime": "2023-12-11T09:17:30.717126602Z"
+        }
+    }
+]
+profe@docker-sxm:~/teo-compose$ _ 
+```
 
+<details>
+<summary>Fes clic aquí per veure la sortida sencera  ...</summary>
+
+* **Sortida sencera**:
 ```
 profe@docker-sxm:~/teo-compose$ sudo docker inspect teo-compose-web
 [
@@ -472,7 +533,6 @@ profe@docker-sxm:~/teo-compose$ _
 
 **6.5** Atureu l'aplicació, ja sigui executant **```docker compose down```** des del directori del vostre projecte al terminal, o prement <kbd>CTRL</kbd>+<kbd>C</kbd> al terminal original on vau iniciar l'aplicació.
 
-
 * **Comandes a executar**:
 
 ```
@@ -490,3 +550,5 @@ profe@docker-sxm:~/teo-compose$ sudo docker compose down
  ✔ Network teo-compose_default    Removed        0.0s 
 profe@docker-sxm:~/teo-compose$ 
 ```
+
+![Alt text](../images/image-018-docker-compose.png)
