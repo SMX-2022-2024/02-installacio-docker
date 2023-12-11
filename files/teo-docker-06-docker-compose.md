@@ -247,15 +247,15 @@ sudo docker compose up -d
 <pre>
 profe@docker-sxm:~/teo-compose$ sudo docker compose up -d
 [+] Running 9/9
- ✔ redis 8 layers [⣿⣿⣿⣿⣿⣿⣿⣿]      0B/0B      Pulled                                                                                                                5.5s 
-   ✔ 661ff4d9561e Pull complete                                                                                                                                    0.8s 
+ ✔ redis 8 layers [⣿⣿⣿⣿⣿⣿⣿⣿]      0B/0B      Pulled            5.5s 
+   ✔ 661ff4d9561e Pull complete                                  0.8s 
    ✔ 963a98d2b6c2 Pull complete   
 ...
- => => naming to docker.io/library/teo-compose-web                                                                                                                 0.0s
+ => => naming to docker.io/library/teo-compose-web               0.0s
 [+] Running 3/3
- ✔ Network teo-compose_default    Created                                                                                                                          0.1s 
- ✔ Container teo-compose-web-1    Started                                                                                                                          0.0s 
- ✔ Container teo-compose-redis-1  Started                                                                                                                          0.1s 
+ ✔ Network teo-compose_default    Created                        0.1s 
+ ✔ Container teo-compose-web-1    Started                        0.0s 
+ ✔ Container teo-compose-redis-1  Started                        0.1s 
 profe@docker-sxm:~/teo-compose$ _
 </pre>
 
@@ -267,16 +267,16 @@ profe@docker-sxm:~/teo-compose$ _
 <pre>
 profe@docker-sxm:~/teo-compose$ sudo docker compose up -d
 [+] Running 9/9
- ✔ redis 8 layers [⣿⣿⣿⣿⣿⣿⣿⣿]      0B/0B      Pulled   5.5s 
-   ✔ 661ff4d9561e Pull complete                    0.8s 
-   ✔ 963a98d2b6c2 Pull complete                    0.5s 
-   ✔ dddcc6acb2ed Pull complete                    0.6s 
-   ✔ ff0ac71727e7 Pull complete                    1.1s 
-   ✔ 7959e5ad61f4 Pull complete                    1.9s 
-   ✔ d767cfa2fc09 Pull complete                    1.3s 
-   ✔ 4f4fb700ef54 Pull complete                    1.8s 
-   ✔ 64281ae03186 Pull complete                    2.0s 
-[+] Building 19.2s (13/13) FINISHED            docker:default
+ ✔ redis 8 layers [⣿⣿⣿⣿⣿⣿⣿⣿]                                  0B/0B           Pulled   5.5s 
+   ✔ 661ff4d9561e Pull complete                                                                   0.8s 
+   ✔ 963a98d2b6c2 Pull complete                                                                   0.5s 
+   ✔ dddcc6acb2ed Pull complete                                                                   0.6s 
+   ✔ ff0ac71727e7 Pull complete                                                                   1.1s 
+   ✔ 7959e5ad61f4 Pull complete                                                                   1.9s 
+   ✔ d767cfa2fc09 Pull complete                                                                   1.3s 
+   ✔ 4f4fb700ef54 Pull complete                                                                   1.8s 
+   ✔ 64281ae03186 Pull complete                                                                   2.0s 
+[+] Building 19.2s (13/13) FINISHED                           docker:default
  => [web internal] load build definition from Dockerfile                                          0.0s
  => => transferring dockerfile: 320B                                                              0.0s
  => [web internal] load .dockerignore                                                             0.0s
@@ -284,10 +284,10 @@ profe@docker-sxm:~/teo-compose$ sudo docker compose up -d
  => [web] resolve image config for docker.io/docker/dockerfile:1                                  2.0s
  => [web] docker-image://docker.io/docker/dockerfile:1@sha256:ac85f380a63b13d...0032edf31be0021   1.3s
  => => resolve docker.io/docker/dockerfile:1@sha256:ac85f380a63b13d...0032edf31be0021             0.0s
- => => sha256:ac85f380a63b13d...0032edf31be0021   8.40kB / 8.40kB                                 0.0s
- => => sha256:657fcc512c7369f...1f1834c73ecc77e     482B / 482B                                   0.0s
- => => sha256:a17ee7fff8f5e97...aa0ea431b44bb89   1.27kB / 1.27kB                                 0.0s
- => => sha256:9d9c93f4b00be90...ff93402179ad232  11.80MB / 11.80MB                                1.0s
+ => => sha256:ac85f380a63b13d...0032edf31be0021             8.40kB / 8.40kB                       0.0s
+ => => sha256:657fcc512c7369f...1f1834c73ecc77e               482B / 482B                         0.0s
+ => => sha256:a17ee7fff8f5e97...aa0ea431b44bb89             1.27kB / 1.27kB                       0.0s
+ => => sha256:9d9c93f4b00be90...ff93402179ad232            11.80MB / 11.80MB                      1.0s
  => => extracting sha256:9d9c93f4b00be90...ff93402179ad232                                        0.2s
  => [web internal] load metadata for docker.io/library/python:3.7-alpine                          1.8s
  => [web 1/6] FROM docker.io/library/python:3.7-alpine@sha256:f3d31c8677d03f0...00292048c3        2.4s
