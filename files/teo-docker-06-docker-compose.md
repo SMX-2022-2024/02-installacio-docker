@@ -34,11 +34,11 @@ sudo docker --version
 
 * **Sortida**:
 
-```
+<pre>
 profe@docker-sxm:~$ sudo docker --version
 Docker version 24.0.7, build afdd53b
 profe@docker-sxm:~$ _
-```
+</pre>
 
 Si no el teniu instal·lat, el podeu instal·lar seguint l'enllaç [Install Docker Engine on Ubuntu](https://docs.docker.com/engine/install/ubuntu/)
 
@@ -54,11 +54,11 @@ sudo docker compose version
 
 * **Sortida**:
 
-```
+<pre>
 profe@docker-sxm:~$ sudo docker compose version
 Docker Compose version v2.21.0
 profe@docker-sxm:~$ _
-```
+</pre>
 
 Si no el teniu instal·lat, el podeu instal·lar seguint l'enllaç [Install Compose standalone](https://docs.docker.com/compose/install/standalone/)
 
@@ -78,11 +78,11 @@ cd ~/teo-compose
 
 * **Sortida**:
 
-```
+<pre>
 profe@docker-sxm:~$ sudo mkdir ~/teo-compose
 profe@docker-sxm:~$ cd ~/teo-compose
 profe@docker-sxm:~/teo-compose$ _ 
-```
+</pre>
 
 ## **Pas 2**: Crear un fitxer anomenat **```app.py```** al directori del projecte.
 
@@ -244,7 +244,7 @@ sudo docker compose up -d
 
 * **Sortida**:
 
-```
+<pre>
 profe@docker-sxm:~/teo-compose$ sudo docker compose up -d
 [+] Running 9/9
  ✔ redis 8 layers [⣿⣿⣿⣿⣿⣿⣿⣿]      0B/0B      Pulled                                                                                                                5.5s 
@@ -257,14 +257,14 @@ profe@docker-sxm:~/teo-compose$ sudo docker compose up -d
  ✔ Container teo-compose-web-1    Started                                                                                                                          0.0s 
  ✔ Container teo-compose-redis-1  Started                                                                                                                          0.1s 
 profe@docker-sxm:~/teo-compose$ _
-```
+</pre>
 
 <details>
 <summary>Fes clic aquí per veure la sortida sencera  ...</summary>
 
 * **Sortida sencera**:
 
-```
+<pre>
 profe@docker-sxm:~/teo-compose$ sudo docker compose up -d
 [+] Running 9/9
  ✔ redis 8 layers [⣿⣿⣿⣿⣿⣿⣿⣿]      0B/0B      Pulled   5.5s 
@@ -321,7 +321,7 @@ profe@docker-sxm:~/teo-compose$ sudo docker compose up -d
  ✔ Container teo-compose-web-1    Started                                                         0.0s 
  ✔ Container teo-compose-redis-1  Started                                                         0.1s 
 profe@docker-sxm:~/teo-compose$ _
-```
+</pre>
 </details>
 
 **```docker compose```** extreu una imatge de **```Redis```**, crea una imatge pel codi i inicia els serveis que s'han definit.
@@ -378,7 +378,7 @@ sudo docker inspect teo-compose-web
 
 * **Sortida**:
 
-```
+<pre>
 profe@docker-sxm:~/teo-compose$ sudo docker inspect teo-compose-web
 [
     {
@@ -413,13 +413,13 @@ profe@docker-sxm:~/teo-compose$ sudo docker inspect teo-compose-web
     }
 ]
 profe@docker-sxm:~/teo-compose$ _ 
-```
+</pre>
 
 <details>
 <summary>Fes clic aquí per veure la sortida sencera  ...</summary>
 
 * **Sortida sencera**:
-```
+<pre>
 profe@docker-sxm:~/teo-compose$ sudo docker inspect teo-compose-web
 [
     {
@@ -528,7 +528,7 @@ profe@docker-sxm:~/teo-compose$ sudo docker inspect teo-compose-web
     }
 ]
 profe@docker-sxm:~/teo-compose$ _ 
-```
+</pre>
 </details>
 
 **6.5** Atureu sistema de contenidors de l'aplicació, executant **```docker compose down```** des del directori del projecte al terminal.
@@ -542,14 +542,14 @@ sudo docker compose down
 
 * **Sortida**:
 
-```
+<pre>
 profe@docker-sxm:~/teo-compose$ sudo docker compose down
 [+] Running 3/2
  ✔ Container teo-compose-redis-1  Removed        0.1s 
  ✔ Container teo-compose-web-1    Removed       10.1s 
  ✔ Network teo-compose_default    Removed        0.0s 
 profe@docker-sxm:~/teo-compose$ _
-```
+</pre>
 
 Un cop aturat el sistema de contenidors de l'aplicació, si tornem a visitar la ruta a on s'exposa en sistema, és a dir, **```<adreça IP del servidor>:8000```**, veureu que ja no apareix res.
 
