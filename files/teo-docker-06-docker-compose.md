@@ -345,19 +345,19 @@ El nombre de visites hauria d'augmentar.
 
 ![Alt text](../images/image-017-docker-compose.png)
 
-**6.4** Torneu a la finestra de terminal i escriviu **```docker container list```** per llistar imatges locals.
+**6.4** Torneu a la finestra de terminal i escriviu **```docker image list```** per llistar imatges locals.
 
 * **Comandes a executar**:
 
 ```
 cd ~/teo-compose
-sudo docker container list
+sudo docker image list
 ```
 
 * **Sortida**:
 
 ```
-profe@docker-sxm:~/teo-compose$ sudo docker container list
+profe@docker-sxm:~/teo-compose$ sudo docker image list
 REPOSITORY        TAG       IMAGE ID       CREATED          SIZE
 ...
 teo-compose-web   latest    61eb4d7a8164   10 minutes ago   214MB
