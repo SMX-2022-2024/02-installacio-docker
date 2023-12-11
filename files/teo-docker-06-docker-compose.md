@@ -328,7 +328,7 @@ profe@docker-sxm:~/teo-compose$
 
 En aquest cas, el codi es copia de manera estàtica a la imatge en temps de creació.
 
-**6.2** Introduïu **```http://<adreça IP del servidor>:8000/```** en un navegador per veure l'aplicació en funcionament.
+**6.2** Introduïu **```<adreça IP del servidor>:8000```** en un navegador per veure l'aplicació en funcionament.
 
 Hauríeu de veure un missatge al vostre navegador que digui:
 
@@ -345,13 +345,13 @@ El nombre de visites hauria d'augmentar.
 
 ![Alt text](../images/image-017-docker-compose.png)
 
-**6.4** Torneu a la nova finestra de terminal i escriviu **```docker image ls```** per llistar imatges locals.
+**6.4** Torneu a la finestra de terminal i escriviu **```docker image list```** per llistar imatges locals.
 
 * **Comandes a executar**:
 
 ```
 cd ~/teo-compose
-sudo docker compose up -d
+sudo docker image list
 ```
 
 * **Sortida**:
