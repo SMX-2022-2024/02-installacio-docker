@@ -118,11 +118,9 @@ profe@docker-sxm:~/c02-wp$ _
 > ![WARNING]
 > ## **Abans de continuar ...**
 > <hr>
-
-A partir d'ara, ja no farem servir la comanda **```docker run```** per crear un contenidor, sino que farem servir la comanda **```docker compose```**.
-
-
-
+> 
+> Per aquesta activitat, no farem servir la comanda **```docker run```** per crear un contenidor, sino que farem servir la comanda **```docker compose```**.
+> <hr>
 
 ## **Pas 3**: Creació i confirmació del contingut del fitxer de configuració **```docker-compose.yml```**
 
@@ -180,7 +178,7 @@ sudo cat ~/c02-wp/docker-compose.yml
 
 * **Sortida**:
 
-```
+<pre>
 profe@docker-sxm:~/c02-wp$ cat ~/c02-wp/docker-compose.yml
 version: '3.1'
 
@@ -214,7 +212,7 @@ volumes:
   wordpress:
   db:
 profe@docker-sxm:~/c02-wp$ _
-```
+</pre>
 
 
 ## **Pas 4**: Creació del contenidor amb **```wordpress```** fent servir **```docker compose```**
@@ -228,8 +226,7 @@ sudo docker compose up -d
 
 * **Sortida**:
 
-
-```
+<pre>
 profe@docker-sxm:~/c02-wp$ cd ~/c02-wp
 sudo docker compose up -d
 [+] Running 3/3
@@ -237,7 +234,7 @@ sudo docker compose up -d
  ✔ Container c02-wp-db-1         Started      0.0s 
  ✔ Container c02-wp-wordpress-1  Started      0.0s 
 profe@docker-sxm:~/c02-wp$ _
-```
+</pre>
 
 ## **Pas 5**: Confirmació del que contenidor amb **```wordpress```** està funcionant.
 
@@ -249,13 +246,14 @@ sudo docker container ls
 
 * **Sortida**:
 
-```
+<pre>
 profe@docker-sxm:~/c02-wp$ sudo docker container ls
 CONTAINER ID   IMAGE       COMMAND                  CREATED          STATUS          PORTS                                   NAMES
 e7ba3cb82aa2   wordpress   "docker-entrypoint.s…"   23 seconds ago   Up 23 seconds   0.0.0.0:8085->80/tcp, :::8085->80/tcp   c02-wp-wordpress-1
 340812b43f71   mysql:5.7   "docker-entrypoint.s…"   23 seconds ago   Up 23 seconds   3306/tcp, 33060/tcp                     c02-wp-db-1
 profe@docker-sxm:~/c02-wp$ _
-```
+</pre>
+
 
 ## **Pas 6**: Primer accés al contenidor amb **```wordpress```**
 
@@ -269,7 +267,7 @@ ip a
 
 Aquesta comanda ens mostra **TOTA** la informació **TOTES** les **interfície de xarxa** del servidor.
 
-```
+<pre>
 profe@docker-sxm:~/c01-contenidor-nginx$ ip a
 1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
     link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
@@ -295,7 +293,7 @@ profe@docker-sxm:~/c01-contenidor-nginx$ ip a
        valid_lft forever preferred_lft forever
     inet6 fe80::42:f6ff:fe54:1034/64 scope link 
        valid_lft forever preferred_lft forever
-```
+</pre>
 
 Pero a nosaltres, només ens interessa l'informació de l'**interfície de xarxa** que està configurada com **```Host-Only```**, i, si el **Virtual Box** està amb els valor per defecte, aquestes interfícies tenen una **adreça IP** que comença amb **```192.168.56```**.
 
@@ -307,11 +305,11 @@ ip a | grep 192.168.56
 
 * **Sortida**:
 
-```
+<pre>
 profe@docker-sxm:~/c01-contenidor-nginx$ ip a | grep 192.168.56
     inet 192.168.56.122/24 metric 100 brd 192.168.56.255 scope global dynamic enp0s8
 profe@docker-sxm:~/c01-contenidor-nginx$ _
-```
+</pre>
 
 L'adreça IP que ens interessa és aquella que comença amb **```192.168.56```**, en aquest és **```192.168.56.122```**.
 
