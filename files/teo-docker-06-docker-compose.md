@@ -529,6 +529,7 @@ profe@docker-sxm:~/teo-compose$ sudo docker inspect teo-compose-web
 ]
 profe@docker-sxm:~/teo-compose$ _ 
 </pre>
+
 </details>
 
 **6.5** Atureu sistema de contenidors de l'aplicació, executant **```docker compose down```** des del directori del projecte al terminal.
@@ -555,3 +556,5 @@ Un cop aturat el sistema de contenidors de l'aplicació, si tornem a visitar la 
 
 ![Alt text](../images/image-018-docker-compose.png)
 
+
+[Següent **Creació d'un contenidor de wordpress amb Docker**](./teo-docker-07-contenidor-amb-wordpress.md)
