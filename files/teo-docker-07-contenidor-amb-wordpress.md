@@ -16,11 +16,11 @@ cd ~/c02-wp
 
 * **Sortida**:
 
-```
+<pre>
 profe@docker-sxm:~$ sudo mkdir ~/c02-wp
 profe@docker-sxm:~$ cd ~/c02-wp
 profe@docker-sxm:~/c02-wp$ _ 
-```
+</pre>
 
 <hr>
 
@@ -37,7 +37,7 @@ sudo docker pull wordpress
 
 * **Sortida**:
 
-```
+<pre>
 profe@docker-sxm:~/c02-wp$ sudo docker pull wordpress
 Using default tag: latest
 latest: Pulling from library/wordpress
@@ -66,7 +66,7 @@ Digest: sha256:824689613b4e7b027d0d36f264a53a159d6c7adcf5250539e56efe2940651e19
 Status: Downloaded newer image for wordpress:latest
 docker.io/library/wordpress:latest
 profe@docker-sxm:~/c02-wp$ _ 
-```
+</pre>
 
 ### **Pas 2.2**: Descarrega de la imatge **```mysql:5.7```**
 
@@ -78,14 +78,14 @@ sudo docker pull mysql:5.7
 
 * **Sortida**:
 
-```
+<pre>
 profe@docker-sxm:~/c02-wp$ sudo docker pull mysql:5.7
 5.7: Pulling from library/mysql
 Digest: sha256:f566819f2eee3a60cf5ea6c8b7d1bfc9de62e34268bf62dc34870c4fca8a85d1
 Status: Image is up to date for mysql:5.7
 docker.io/library/mysql:5.7
 profe@docker-sxm:~/c02-wp$ _
-```
+</pre>
 
 ### **Pas 2.3**: Confirmació de que tenim descarregades les dues imatges
 
@@ -97,7 +97,7 @@ sudo docker image ls
 
 * **Sortida**:
 
-```
+<pre>
 profe@docker-sxm:~/c02-wp$ sudo docker pull mysql:5.7
 5.7: Pulling from library/mysql
 Digest: sha256:f566819f2eee3a60cf5ea6c8b7d1bfc9de62e34268bf62dc34870c4fca8a85d1
@@ -111,7 +111,7 @@ wordpress     latest    bc823df9ead2   12 days ago    668MB
 mysql         5.7       bdba757bc933   5 weeks ago    501MB
 ...
 profe@docker-sxm:~/c02-wp$ _
-```
+</pre>
 
 <hr>
 
