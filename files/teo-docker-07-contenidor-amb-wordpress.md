@@ -358,6 +358,10 @@ http://192.168.56.122:8085/admin
 
 ![Alt text](../images/image-015-admin-full.png)
 
+Per acabar, cal que torneu a fer l'activitat de wordpress que vareu fer amb el **Rubén Martinez** al **mòdul professional 8: Aplicacions web**.
+
+
+
 <!-- 
 ![Alt text](../images/image-10.png)
 
