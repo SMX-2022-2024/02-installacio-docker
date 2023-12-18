@@ -358,11 +358,10 @@ http://192.168.56.122:8085/admin
 
 ![Alt text](../images/image-015-admin-full.png)
 
-
-
+<!-- 
 ![Alt text](../images/image-10.png)
 
 
 ![Alt text](../images/image-11.png)
 
-![Alt text](../images/image-12.png)
+![Alt text](../images/image-12.png) -->
