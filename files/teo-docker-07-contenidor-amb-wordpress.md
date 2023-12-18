@@ -360,7 +360,7 @@ http://192.168.56.122:8085/admin
 
 Per acabar, cal que torneu a fer l'activitat de wordpress que vareu fer amb el **Rubén Martinez** al **mòdul professional 8: Aplicacions web**.
 
-
+[**UF3-AC1**: Instal·lació, personalització i configuració bàsica](https://sites.google.com/ginebro.cat/m8smx-aplicacions-web/uf3/ac1-installaci%C3%B3-personalitzaci%C3%B3-i-configuraci%C3%B3-b%C3%A0sica)
 
 <!-- 
 ![Alt text](../images/image-10.png)
