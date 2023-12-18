@@ -345,10 +345,6 @@ Per defecte ens ofereix una contrasenya, en el cas de l'exemple **```Up5(cRBER#t
 
 Una vegada ja heu introduit totes les dades, per poder continuar cal que pressioneu el botó <kbd>Instal·la el WordPress</kbd>.
 
-![Alt text](../images/image-011-conf-profe-wordpress.png)
-
-![Alt text](../images/image-009-wordpress.png)
-
 ![Alt text](../images/image-012-1a-entrada-profe-wordpress.png)
 
 ![Alt text](../images/image-013-1a-execucio-pag-exemple.png)
